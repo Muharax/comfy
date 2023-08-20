@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/comfy/static/css/main.4d1ca160.css",
+    "main.js": "/comfy/static/js/main.262159d4.js",
+    "static/media/3.jpg": "/comfy/static/media/3.950e015c33fc7c768085.jpg",
+    "static/media/2.jpg": "/comfy/static/media/2.7d217271501fe2185bd1.jpg",
+    "static/media/5.jpg": "/comfy/static/media/5.8e3d49b2f39bf3a2ebff.jpg",
+    "static/media/1.jpg": "/comfy/static/media/1.6928efce4c770deeb810.jpg",
+    "static/media/6.jpg": "/comfy/static/media/6.89ca499378687cc7fbce.jpg",
+    "static/media/4.jpg": "/comfy/static/media/4.35f8d1cf7b4b16d2ff73.jpg",
+    "static/media/slide3.jpg": "/comfy/static/media/slide3.e2fc46cd37361a69e2cc.jpg",
+    "static/media/outdoor.jpg": "/comfy/static/media/outdoor.8741da5ee2e951ffe4fd.jpg",
+    "static/media/sofas.jpg": "/comfy/static/media/sofas.53332655d3882a57bdba.jpg",
+    "static/media/slide1.jpg": "/comfy/static/media/slide1.04a9fa1d4a47dcecc894.jpg",
+    "static/media/chairs.jpg": "/comfy/static/media/chairs.a995aaa8f56ff20a0bac.jpg",
+    "static/media/eco-freindly.jpg": "/comfy/static/media/eco-freindly.740823856060ca860e33.jpg",
+    "static/media/aeronChair-h.jpg": "/comfy/static/media/aeronChair-h.b70407b5baf02381876f.jpg",
+    "static/media/aeronChair-o.jpg": "/comfy/static/media/aeronChair-o.52094721173797840916.jpg",
+    "static/media/decors.jpg": "/comfy/static/media/decors.9ba6153d4c49c6d63b3c.jpg",
+    "static/media/namasteVase-h.jpg": "/comfy/static/media/namasteVase-h.cf612307a15b4f67daff.jpg",
+    "static/media/logo-footer.png": "/comfy/static/media/logo-footer.6d5b742d994712819e08.png",
+    "static/media/main-logo.png": "/comfy/static/media/main-logo.5d5f21e424701ba704eb.png",
+    "static/media/mundoSofa-o.jpg": "/comfy/static/media/mundoSofa-o.a30be16e325f11c29193.jpg",
+    "static/media/magsSofa-h.jpg": "/comfy/static/media/magsSofa-h.70b98e97fb3c82ea42cb.jpg",
+    "static/media/mundoSofa-h.jpg": "/comfy/static/media/mundoSofa-h.9c6d809ab546ced2d78b.jpg",
+    "static/media/zunkelSchwarz-o.jpg": "/comfy/static/media/zunkelSchwarz-o.99912d56044cd86f92e5.jpg",
+    "static/media/pillarDining-h.jpg": "/comfy/static/media/pillarDining-h.b77f6d7b2e0f5083782b.jpg",
+    "static/media/zunkelSchwarz-h.jpg": "/comfy/static/media/zunkelSchwarz-h.dda714ae1724654bdf09.jpg",
+    "static/media/namasteVase-o.jpg": "/comfy/static/media/namasteVase-o.1d89f4ec15da8e35de66.jpg",
+    "static/media/slick.svg": "/comfy/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/comfy/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/comfy/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/comfy/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/comfy/index.html",
+    "main.4d1ca160.css.map": "/comfy/static/css/main.4d1ca160.css.map",
+    "main.262159d4.js.map": "/comfy/static/js/main.262159d4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4d1ca160.css",
+    "static/js/main.262159d4.js"
+  ]
+}
