@@ -18,10 +18,10 @@ const SingleTrendingProduct = ({ data: { pId, pName, pInitialImage, pHoverImage,
                 <div className="image-hover-top">
                     {outOfStock && <span className="out-stock">out of stock</span>}
                     {pSalePrice && <span className="out-stock">-{pSalePrice}%</span>}
-                    <a href="#">
+                    <Link to="/shop">
                         <img src={pInitialImage} alt="" />
                         <img src={pHoverImage} alt="" />
-                    </a>
+                    </Link>
                     {!outOfStock && <AddToCartBtn />}
 
                 </div>
