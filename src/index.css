@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap');
+
+:root {
+  --dark: #444;
+  --navbar-active-link: #c7ab62;
+  --navbar-link-hover: #c7ab62;
+  --navbar-link-hover: #c7ab62;
+  --button-bg: #fff;
+  --button-clr: #444;
+  --button-bg-hover: #c7ab62;
+  --arrow-slide-clr: rgba(0, 0, 0, .4);
+  --arrow-slide-hover: #c7ab62;
+}
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: auto;
+  position: relative;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a.my_link {
+  text-decoration: none;
+  color: #666;
+}
+
+a.shop-now {
+  font-size: 16px;
+  color: #222;
+  font-weight: 900;
+  transition: all .2s;
+  text-decoration: none;
+}
+
+a.shop-now svg {
+  margin-left: 1px;
+  font-size: 21px;
+}
+
+a.shop-now:hover {
+  color: #c7ab62;
+}
+
+ul.ul-custom {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
