@@ -4,8 +4,10 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Logo from "../../assets/images/main-logo.png";
 import { Link, useLocation } from 'react-router-dom';
-import { FaUserLarge, FaMagnifyingGlass, FaCartShopping, FaUnlock } from "react-icons/fa6";
-import { useEffect, useState } from 'react';
+import { FaUser, FaMagnifyingGlass, FaCartShopping, FaUnlock } from "react-icons/fa6";
+import { useEffect, useState, useContext } from 'react';
+import { OpenModalContext } from "../../context/OpenModalContext";
+import { AuthContext } from '../../context/AuthContext';
 
 /*======================================*/
 /*======================================*/
@@ -13,17 +15,32 @@ import { useEffect, useState } from 'react';
 
 const TopMenu = () => {
 
+  const { setShowCartModal, showCartModal, setShowRegisterModal } = useContext(OpenModalContext);
+
+  const { existUser } = useContext(AuthContext);
+
+
+
+
+
+
+
+
+  // in order to make active class when navigate pages
   const [url, setUrl] = useState(null);
+
+  // in order to close the menu and go smoothly when click on link inside it
   const [expanded, setExpanded] = useState(false);
+
   const location = useLocation("/");
-  const existUser = true;
 
-  // give active class for link depend on location
+  // give active class for link depend on location,and change the overflow of body depend is cart modal show or not
   useEffect(() => {
-
+    const body = document.querySelector('body');
+    body.style.overflow = showCartModal ? 'hidden' : 'auto';
     setUrl(location.pathname);
 
-  }, [location]);
+  }, [location, showCartModal]);
 
   return (
     <div className='topmenu'>
@@ -38,18 +55,19 @@ const TopMenu = () => {
             <Nav className="mx-auto">
               <Nav.Link as={Link} to={"/"} className={url === "/" ? "active" : ""} onClick={() => setExpanded(false)}>Home</Nav.Link>
               <Nav.Link as={Link} to={"/shop"} className={url === "/shop" ? "active" : ""} onClick={() => setExpanded(false)}>Shop</Nav.Link>
-              <Nav.Link href="">About</Nav.Link>
-              <Nav.Link href="">Contact</Nav.Link>
-              <Nav.Link href="">FAQ</Nav.Link>
+              <Nav.Link as={Link} to={"/about"} className={url === "/about" ? "active" : ""} onClick={() => setExpanded(false)}>About</Nav.Link>
+              <Nav.Link as={Link} to={"/contact"} className={url === "/contact" ? "active" : ""} onClick={() => setExpanded(false)}>Contact</Nav.Link>
+              <Nav.Link as={Link} to={"/faq"} className={url === "/faq" ? "active" : ""} onClick={() => setExpanded(false)}>FAQ</Nav.Link>
             </Nav>
-            <Nav className='hide-on-resize'>
-              <Nav.Link href="https://www.google.com/" className='register-login'>
+            <Nav className='hide-on-resize gap-2'>
+              <Nav.Link as={Link} to={existUser && "/account/myOrder"} className='register-login'>
                 {/* if there is user show icon otherwise show register div */}
-                {existUser ? <div><FaUnlock /> <p>Login / Register</p></div> : <FaUserLarge />}
+                {!existUser && <div><FaUnlock /> <p onClick={() => setShowRegisterModal(true)}>Login / Register</p></div>}
+                {existUser && <FaUser />}
               </Nav.Link>
-              <Nav.Link href=""><FaMagnifyingGlass /></Nav.Link>
+              <Nav.Link as={Link} to={"/search"}><FaMagnifyingGlass /></Nav.Link>
               <Nav.Link href="" className='icon-badge'>
-                <FaCartShopping />
+                <FaCartShopping onClick={() => existUser ? setShowCartModal(true) : setShowRegisterModal(true)} />
                 <span>2</span>
               </Nav.Link>
             </Nav>

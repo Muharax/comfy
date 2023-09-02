@@ -10,7 +10,27 @@
   --button-bg-hover: #c7ab62;
   --arrow-slide-clr: rgba(0, 0, 0, .4);
   --arrow-slide-hover: #c7ab62;
+  --form-btn-hover: #c7ab62;
 }
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #c7ab62 #fff;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #c7ab62;
+}
+
 
 body {
   margin: 0;
@@ -52,4 +72,30 @@ ul.ul-custom {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+
+.underline-heading {
+  font-size: 35px;
+  position: relative;
+  font-weight: 400;
+}
+
+.underline-heading::before,
+.underline-heading::after {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  height: 2px;
+}
+
+.underline-heading::before {
+  width: 100%;
+  background-color: #d3d3d3;
+}
+
+.underline-heading::after {
+  width: 30%;
+  background-color: #000;
 }

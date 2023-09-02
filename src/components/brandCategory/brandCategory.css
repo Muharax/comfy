@@ -52,6 +52,11 @@
 /*====================================*/
 
 @media only screen and (max-width: 480px) {
+
+    .brand-category {
+        margin-top: 30px;
+    }
+
     .brand-category .brand-category-box {
         display: flex;
         height: 730px;

@@ -38,6 +38,35 @@
     background-color: var(--arrow-slide-hover);
 }
 
+/* style dosts of slick slider */
+.slick-dots {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.slick-dots li {
+    width: 30px !important;
+    height: 5px !important;
+    background-color: #222 !important;
+    transition: all .2s;
+}
+
+.slick-dots li button::before {
+    display: none !important;
+}
+
+.slick-dots li button {
+    width: 100% !important;
+    height: 15px !important;
+    padding: 0 !important;
+    background-color: #222 !important;
+}
+
+.slick-dots li.slick-active {
+    width: 50px !important;
+}
+
 /*====================================*/
 /*===========Responsive===============*/
 /*====================================*/
@@ -51,8 +80,6 @@
         font-size: 17px;
     }
 
-
-
     .slick-prev {
         left: 28px !important;
         top: 40% !important;
@@ -61,5 +88,9 @@
     .slick-next {
         right: 37px !important;
         top: 40% !important;
+    }
+
+    .slick-dots {
+        bottom: -12px !important;
     }
 }

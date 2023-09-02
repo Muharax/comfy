@@ -21,8 +21,7 @@ const HomePage = () => {
             <HomeCategory />
             <HomeServices />
             <BrandSlider />
-            <InstaPosts />
-            <FooterSection />
+            <InstaPosts /> 
         </div>
     )
 }

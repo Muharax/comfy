@@ -113,6 +113,10 @@
     line-height: 1.6;
 }
 
+.footer-section .footer-section-box .middle .order-by-phone {
+    margin-bottom: 15px;
+}
+
 .footer-section .footer-section-box .middle a {
     color: #fff;
 }
@@ -176,7 +180,7 @@
 
     .footer-section .footer-section-box {
         flex-direction: column;
-        padding: 40px 0 15px 0;
+        padding: 40px 0 40px 0;
         gap: 10px;
     }
 

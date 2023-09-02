@@ -28,6 +28,10 @@
     gap: 5px;
 }
 
+.topmenu .register-login a {
+    color: var(--dark);
+}
+
 .topmenu .register-login div p {
     margin: 0;
 }

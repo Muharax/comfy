@@ -5,8 +5,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { LiaAngleRightSolid, LiaAngleLeftSolid } from "react-icons/lia";
-import SingleTrendingProduct from './SingleTrendingProduct';
-import { topTrendingData } from "../../config/data";
+import SingleProductUi from './SingleProductUi';
+import { AllProductsItems } from "../../config/data";
 
 /*======================================*/
 /*======================================*/
@@ -56,8 +56,8 @@ const TopTrending = () => {
                 <h3>Top Trending</h3>
                 <div className="top-trending-slider">
                     <Slider {...settings}>
-                        {topTrendingData.map((data) => (
-                            <SingleTrendingProduct data={data} key={data.pId} />
+                        {AllProductsItems.map((data) => (
+                            <SingleProductUi data={data} key={data.pId} />
                         ))}
                     </Slider>
                 </div>

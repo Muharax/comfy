@@ -1,0 +1,80 @@
+import './account.css';
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
+import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { AuthContext } from '../../context/AuthContext';
+import { OpenModalContext } from '../../context/OpenModalContext';
+import OrderAcoordion from '../../components/OrderAcoordion';
+import FormAccount from '../../components/FormAccount';
+import FormUpdatePass from '../../components/FormUpdatePass';
+import TabsAccount from '../../components/TabsAccount';
+
+/*======================================*/
+/*======================================*/
+/*======================================*/
+
+const Account = () => {
+
+
+
+
+
+
+
+
+  // this is my varible for testing
+  const therIsProduct = true;
+
+  const navigate = useNavigate();
+
+  const { existUser, setExitstUser } = useContext(AuthContext);
+
+  const { showRegisterModal, setShowRegisterModal } = useContext(OpenModalContext);
+
+  let getUserEmail = localStorage.getItem('user') !== null && (JSON.parse(localStorage.getItem("user"))).r_email;
+
+  let getUserName = localStorage.getItem('user') !== null && (JSON.parse(localStorage.getItem("user"))).r_username;
+
+  // logout user from localstorage and make the [existUser] in order to remove the exsiting user
+  const handleLogout = (e) => {
+
+    e.preventDefault();
+
+    setExitstUser(false);
+
+    localStorage.removeItem('user');
+
+    setShowRegisterModal(false);
+
+    // in order to prevent user go back to it page , when already logout
+    navigate("/", { replace: true });
+
+  }
+
+  return (
+    <div className='account-main'>
+      <div className="account-main-box">
+        <div className="account-user-info">
+          <div>
+            <h2>Account</h2>
+            <p><span className='text-capitalize'>{getUserName}</span> ,<span>{getUserEmail}</span></p>
+          </div>
+          <Link onClick={handleLogout}><span className="logout">logout</span></Link>
+        </div>
+        <div className="account-tabs">
+
+
+        
+
+<TabsAccount getUserName={getUserName} getUserEmail={getUserEmail} />
+
+
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default Account;
