@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/comfy/static/css/main.666789ba.css",
-    "main.js": "/comfy/static/js/main.1cd14995.js",
+    "main.css": "/comfy/static/css/main.2685f592.css",
+    "main.js": "/comfy/static/js/main.7b93b40f.js",
     "static/media/3.jpg": "/comfy/static/media/3.950e015c33fc7c768085.jpg",
     "static/media/2.jpg": "/comfy/static/media/2.7d217271501fe2185bd1.jpg",
     "static/media/5.jpg": "/comfy/static/media/5.8e3d49b2f39bf3a2ebff.jpg",
     "static/media/1.jpg": "/comfy/static/media/1.6928efce4c770deeb810.jpg",
     "static/media/6.jpg": "/comfy/static/media/6.89ca499378687cc7fbce.jpg",
     "static/media/4.jpg": "/comfy/static/media/4.35f8d1cf7b4b16d2ff73.jpg",
+    "static/media/about-bg.jpg": "/comfy/static/media/about-bg.d69e459e3500832bbc04.jpg",
     "static/media/slide3.jpg": "/comfy/static/media/slide3.e2fc46cd37361a69e2cc.jpg",
     "static/media/outdoor.jpg": "/comfy/static/media/outdoor.8741da5ee2e951ffe4fd.jpg",
+    "static/media/header-cover.jpg": "/comfy/static/media/header-cover.0fed8cdf5bbcbf1de2c2.jpg",
     "static/media/sofas.jpg": "/comfy/static/media/sofas.53332655d3882a57bdba.jpg",
     "static/media/slide1.jpg": "/comfy/static/media/slide1.04a9fa1d4a47dcecc894.jpg",
     "static/media/chairs.jpg": "/comfy/static/media/chairs.a995aaa8f56ff20a0bac.jpg",
@@ -32,11 +34,11 @@
     "static/media/slick.ttf": "/comfy/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/comfy/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/comfy/index.html",
-    "main.666789ba.css.map": "/comfy/static/css/main.666789ba.css.map",
-    "main.1cd14995.js.map": "/comfy/static/js/main.1cd14995.js.map"
+    "main.2685f592.css.map": "/comfy/static/css/main.2685f592.css.map",
+    "main.7b93b40f.js.map": "/comfy/static/js/main.7b93b40f.js.map"
   },
   "entrypoints": [
-    "static/css/main.666789ba.css",
-    "static/js/main.1cd14995.js"
+    "static/css/main.2685f592.css",
+    "static/js/main.7b93b40f.js"
   ]
 }
