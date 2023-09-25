@@ -112,10 +112,11 @@
     .view-cart .view-cart-box {
         margin: 50px auto 80px;
         width: 90%;
+        overflow-x: scroll;
     }
 
-    .view-cart .view-cart-box {
-        overflow-x: scroll;
+    .view-cart .view-cart-box .table-empty{
+        padding: 20px 0;
     }
 
     .view-cart .view-cart-box::-webkit-scrollbar {

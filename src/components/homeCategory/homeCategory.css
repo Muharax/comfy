@@ -143,4 +143,8 @@
       flex-direction: column;
       margin-top: 0;
    }
+
+   .home-category .home-category-box .right .top-content .right{
+      margin-bottom: 13px;
+   }
 }
