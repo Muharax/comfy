@@ -287,9 +287,9 @@
     }
 
     .full-screen-product-slider .pr-slider .carousel-item img {
-        width: 70%;
-        height: 45vmax;
-        margin: 210px auto;
+        width: 70% !important;
+        height: 45vmax !important;
+        margin: 210px auto !important;
     }
 
     .full-screen-product-slider .pr-slider .carousel-indicators {

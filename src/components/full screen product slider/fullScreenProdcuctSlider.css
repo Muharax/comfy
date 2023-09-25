@@ -61,10 +61,10 @@
 /*====================================*/
 
 @media only screen and (max-width: 480px) {
-    .carousel .carousel-item img {
+    /* .carousel .carousel-item img {
         width: 73%;
         height: 300px;
         margin: 184px auto 0;
         object-fit: cover;
-    }
+    } */
 }
