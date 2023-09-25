@@ -6,6 +6,7 @@ import { FaSquareMinus, FaSquarePlus } from "react-icons/fa6";
 import { ConfirmModalContext } from "../context/ConfirmModalContext";
 import { AuthContext } from "../context/AuthContext";
 import { OpenModalContext } from "../context/OpenModalContext";
+
 /*======================================*/
 /*======================================*/
 /*======================================*/
@@ -13,23 +14,14 @@ import { OpenModalContext } from "../context/OpenModalContext";
 
 const ProductDetailsRight = (props) => {
 
+    // this will remove the the product from [single product details],and close the confirm delte msg
     const { handleJustCloseWhenRemoveFromSingleDetails } = useContext(ConfirmModalContext);
     const { setShowCartModal, setShowRegisterModal } = useContext(OpenModalContext);
     const { existUser } = useContext(AuthContext);
+    const { cart, setCart, handleDecreaseCounter, handleIncreaseCounter, handleAddTocart } = useContext(CartContext);
 
-    const {
-        getSingleProductToDrawDetails,
-        netPriceAfterSale,
-        handleCheck,
-        isCheck,
-        id, pId } = props;
+    const { getSingleProductToDrawDetails, netPriceAfterSale, handleCheck, isCheck, id, pId } = props;
 
-    const {
-        cart,
-        setCart,
-        handleDecreaseCounter,
-        handleIncreaseCounter,
-        handleAddTocart } = useContext(CartContext);
 
     // set the active that will show when we click on color element in product details
     const [activeColor, setActiveColor] = useState(0);
@@ -38,12 +30,11 @@ const ProductDetailsRight = (props) => {
     const [isBtnProductDetailsClicked, setIsBtnProductDetailsClicked] = useState(false);
     const [isProductDetailsSpinnerShow, setsProductDetailsSpinnerShow] = useState(false);
 
-    // // this is in order to make operation inside [buy it now] button like [spinner]
+    // this is in order to make operation inside [buy it now] button like [spinner]
     const [isBuyBtnClicked, setIsBuyBtnClicked] = useState(false);
     const [showBuyBtnSpinner, setShowBuyBtnSpinner] = useState(false);
 
     const navigate = useNavigate();
-
 
     /*
     check if the product found in [cart] in order to display the [+ and -] btn
@@ -59,8 +50,10 @@ const ProductDetailsRight = (props) => {
         }
 
         return false;
+
     });
 
+    // this useEffect when click on [add to cart btn that in single product details]
     useEffect(() => {
 
         let timer;
@@ -72,6 +65,7 @@ const ProductDetailsRight = (props) => {
             timer = setTimeout(() => {
 
                 setsProductDetailsSpinnerShow(false);
+
                 setIsBtnProductDetailsClicked(false);
 
             }, 800);
@@ -83,6 +77,7 @@ const ProductDetailsRight = (props) => {
     }, [isBtnProductDetailsClicked, id])
 
 
+    // this useEffect when click on [buy it now btn in single product details]
     useEffect(() => {
 
         let timer;
@@ -103,18 +98,38 @@ const ProductDetailsRight = (props) => {
 
     }, [isBuyBtnClicked])
 
+
+    // this func in order to do someting
     const handleBuyBtnClicked = () => {
+
         // only when exist user regiter,do the following
         if (existUser) {
+
+            /*
+            1 - when exist user and need to buy the product from [single product details]
+            run the spinner that in [add to cart btn] and that in [buy it now]
+            by make the [add to cart btn] clicked and the spinnner show in same time 
+
+            2 - after the operation like [spinner inside btn] excute ,add the product to cart
+
+            3 - close the cart modal , cause it will navigate to the [checkout/information] page 
+            */
             setIsBuyBtnClicked(true);
+
             setsProductDetailsSpinnerShow(true);
+
             setShowBuyBtnSpinner(true);
+
             handleAddTocart(getSingleProductToDrawDetails.pId);
+
             // dont show the cart modal when navigate to checkout page
             setShowCartModal(false);
+
         } else {
+
             // open the register modal in case not user exist
             setShowRegisterModal(true);
+
         }
 
     }
@@ -132,7 +147,7 @@ const ProductDetailsRight = (props) => {
     }
 
     /*
-    handle all fucnt that will add to cart and make the operation
+    handle all func that will [add to cart and make the operation]
     inside the [add to cart] that inside [single prodcut details]
     */
     const handleClickAllAll = () => {
@@ -142,6 +157,15 @@ const ProductDetailsRight = (props) => {
         handleAddTocart(getSingleProductToDrawDetails.pId);
 
     }
+
+    /*
+    here find the single product that has [same id with product id in cart]
+    coz we will get the new value of [quantity] when user add product from [single product details]
+
+    BUUUUUUUUT first of find the [product] we SHOULD MAKE SURE that the user already ADEDDDDDDDDDDD 
+    the product to cart,cos it will show undifind without add the product to cart 
+    */
+    let hh = isFound && cart.find(el => el.pId === getSingleProductToDrawDetails.pId);
 
     return (
         <div className="right">
@@ -155,7 +179,9 @@ const ProductDetailsRight = (props) => {
 
             {/* if the product has sale , show the value of the sale like [Discount: ($9%)] */}
             {getSingleProductToDrawDetails.pSalePrice ?
-                <><p className='my-p'>Discount: ({`$${getSingleProductToDrawDetails.pSalePrice}%`})</p></>
+                <>
+                    <p className='my-p'>Discount: ({`$${getSingleProductToDrawDetails.pSalePrice}%`})</p>
+                </>
                 :
                 ""
             }
@@ -170,7 +196,7 @@ const ProductDetailsRight = (props) => {
                 <span className='fw-semibold'>${getSingleProductToDrawDetails.pPrice}</span>
             }
 
-            {/* get the desc length 300 char */}
+            {/* get the desc length 290 char */}
             <p className="desc color-secondary-gray py-3">
                 {getSingleProductToDrawDetails.pShortDesc.length > 290 ?
                     getSingleProductToDrawDetails.pShortDesc.slice(0, 290) + "..." :
@@ -179,7 +205,7 @@ const ProductDetailsRight = (props) => {
             </p>
 
             {/* 
-            if there is product in stock equal zero that mean out of stock and show [Out Of Stock] ,
+            show [Out Of Stock] text , if (product in stock) equal zero that mean out of stock ,
             otherwise put the number of product in stock
             */}
             <h6>
@@ -214,36 +240,30 @@ const ProductDetailsRight = (props) => {
                         <div className="cart-counter text-center mb-4">
                             <button className="counter-btn" onClick={
                                 () => {
-                                    handleDecreaseCounter(pId);
-                                    handleJustCloseWhenRemoveFromSingleDetails(getSingleProductToDrawDetails.pId)
-                                    console.log(getSingleProductToDrawDetails.pQty)
+                                    handleDecreaseCounter(hh.pId);
+                                    /*
+                                    here we will remove the product when user in [single product details] 
+                                    just excute, when user click on [minus btn] and in CASE the [prodcut quantity] equal 1 
+                                    */
+                                    hh.pQty === 1 && handleJustCloseWhenRemoveFromSingleDetails(hh.pId)
                                 }
                             }>
                                 <FaSquareMinus />
                             </button>
                             {/* if the quantiy less than 10 add zero to the quantity */}
                             <span>
-                                {
-                                    getSingleProductToDrawDetails.pQty < 10
-                                        ? "0" + getSingleProductToDrawDetails.pQty :
-                                        getSingleProductToDrawDetails.pQty
-                                }
+                                {hh.pQty < 10 ? "0" + hh.pQty : hh.pQty}
                             </span>
                             {/* 
-                            here we check if the the pquantiy greater than the stock of this product
+                            here we check if the [the prodcut quantity] greater than the stock of this product
                             prevent user to click again to increase more product
                         */}
                             <button
                                 className="counter-btn"
-                                disabled={getSingleProductToDrawDetails.pQty >= Number(getSingleProductToDrawDetails.pInStock)
-                                    ? true
-                                    : ""
-                                }
+                                disabled={hh.pQty >= Number(hh.pInStock) ? true : ""}
                                 onClick={() => {
-                                    handleIncreaseCounter(pId)
-                                    console.log(getSingleProductToDrawDetails.pQty)
+                                    handleIncreaseCounter(hh.pId)
                                 }
-
                                 }>
                                 <FaSquarePlus />
                             </button>
@@ -255,6 +275,7 @@ const ProductDetailsRight = (props) => {
                             <>
                                 <button
                                     className="btn bg-dark text-white text-capitalize px-5 rounded-2 mx-auto mb-4 d-flex align-items-center justify-content-center"
+                                    /*make the [add to cart btn] disable ,in case the product is outofstock */
                                     disabled={getSingleProductToDrawDetails.outOfStock ? true : false}
                                     onClick={handleClickAllAll}
                                 >
@@ -296,6 +317,7 @@ const ProductDetailsRight = (props) => {
                         <button
                             type="button"
                             className="btn btn-dark rounded-1 btn-lg btn-block w-100 text-uppercase d-flex align-itemes-center justify-content-center"
+                            /*make the [buy it now btn] disable ,in case the product is outofstock */
                             disabled={!isCheck || getSingleProductToDrawDetails.outOfStock ? true : false}
                             onClick={handleBuyBtnClicked}
                         >buy it now</button>

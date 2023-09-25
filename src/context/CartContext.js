@@ -102,9 +102,7 @@ export const CartContextProvider = ({ children }) => {
 
             });
 
-        });
-
-        console.log("increase")
+        });  
 
     };
 
@@ -129,9 +127,7 @@ export const CartContextProvider = ({ children }) => {
 
             });
 
-        });
-
-        console.log("decrease")
+        }); 
 
     }
 
