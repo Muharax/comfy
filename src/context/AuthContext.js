@@ -8,19 +8,20 @@ export const AuthContext = createContext();
 
 export const AuthContextProvider = ({ children }) => {
 
-    // this in orde to change it when submit form , in order to display an alert success msg for a while and hidden after 1 second   
+    // this in order to change it when submit form , in order to display an alert success msg for a while and hidden after 1 second   
     const [isRegisterSubmit, setIsRegisterSubmit] = useState(false);
 
     const [isLoginSubmit, setIsLoginSubmit] = useState(false);
 
     const [isContactFormSubmit, setIsContactFormSubmit] = useState(false);
 
-    // save the existuser in localstorage
+    // save the existuser in localstorage 
     const [existUser, setExitstUser] = useState(JSON.parse(localStorage.getItem("exist")) || false);
 
     // save the user data in localstorage
     const [formData, setFormData] = useState(JSON.parse(localStorage.getItem("user")) ||
         { r_username: "", r_email: "", r_pass: "", r_Cpass: "" });
+
     const [x, setX] = useState(false);
 
     useEffect(() => {
@@ -30,6 +31,10 @@ export const AuthContextProvider = ({ children }) => {
         localStorage.setItem('exist', JSON.stringify(existUser));
 
     }, [formData, existUser])
+
+    const logout = (e) => {
+        setExitstUser(false);
+    }
 
     return (
         <AuthContext.Provider value={{
@@ -44,7 +49,8 @@ export const AuthContextProvider = ({ children }) => {
             isContactFormSubmit,
             setIsContactFormSubmit,
             x,
-            setX
+            setX,
+            logout
         }}>
             {children}
         </AuthContext.Provider>

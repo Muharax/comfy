@@ -1,11 +1,10 @@
  /* style tabs */
- .modal-register-box {
-     overflow: hidden !important;
+ .modal-register-box .modal-body {
+     overflow-y: auto !important;
  }
 
-
- .modal-dialog-scrollable .modal-body {
-     overflow-y: auto !important;
+ .modal-register-box .modal-body::-webkit-scrollbar {
+     width: 3px;
  }
 
  .modal-content {
@@ -13,22 +12,14 @@
      overflow: hidden !important;
  }
 
-
-
-
  .modal-register-box .modal-header {
      border-bottom: none !important;
  }
-
-
- .form-group {}
 
  .form-group label+div input {
      position: relative;
      height: 38px;
  }
-
-
 
  .modal-register-box .btn-close {
      transition: all .3s linear 0s;
@@ -69,15 +60,13 @@
  }
 
  /* style form */
-
-
  .modal-register-box form span.span-icon {
-     cursor: pointer;
      position: absolute;
      right: 15px;
      top: 43%;
      transform: translateY(-50%);
      font-size: 20px;
+     cursor: pointer;
  }
 
  .modal-register-box form p.show-error {
@@ -85,37 +74,6 @@
      margin-bottom: 0;
      /* display: none; */
  }
-
-
-
-
-
- /* .modal-register-box form input:invalid ~ p.show-error{
-    display: block;
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
  .modal-register-box form button {
      transition: all .2s;
@@ -141,12 +99,10 @@
 
  .modal-register-box .login-form-bottom span {
      position: relative;
-
  }
 
  .modal-register-box .login-form-bottom span {
      position: relative;
-
  }
 
  .modal-register-box .login-form-bottom span::before,
@@ -157,8 +113,6 @@
      width: 500px;
      height: 2px;
      background-color: #ccc;
-
-
  }
 
  .modal-register-box .login-form-bottom span::after {

@@ -165,7 +165,7 @@
     text-align: center;
     color: #999;
     border-top: 1px solid #706969;
-    padding: 25px 0;
+    padding: 25px 0; 
 }
 
 .footer-copyright p {
@@ -177,6 +177,8 @@
 /*====================================*/
 
 @media only screen and (max-width: 480px) {
+
+   
 
     .footer-section .footer-section-box {
         flex-direction: column;
@@ -209,4 +211,14 @@
         padding: 8px 0;
     }
 
+}
+
+@media only screen and (max-width: 991px) {
+    .footer-section { 
+        /* margin-bottom: 50px; */
+    }
+
+    .footer-copyright { 
+        margin-bottom: 50px;
+    }
 }

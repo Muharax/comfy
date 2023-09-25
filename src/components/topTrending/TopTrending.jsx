@@ -7,12 +7,41 @@ import "slick-carousel/slick/slick-theme.css";
 import { LiaAngleRightSolid, LiaAngleLeftSolid } from "react-icons/lia";
 import SingleProductUi from './SingleProductUi';
 import { AllProductsItems } from "../../config/data";
-
+import { useState } from 'react';
+import { CartContext } from "../../context/CartContext";
+import { useContext } from 'react';
 /*======================================*/
 /*======================================*/
 /*======================================*/
 
 const TopTrending = () => {
+    // const [cart , setCart] = useState([]);
+
+    const {
+        cart,
+        setCart,
+        handleClick,
+        productsInTable,
+        setProducsInTable,
+        productCounter,
+        setProductCounter,
+        isDiseable,
+        setIsDesable,
+        isBtnEmptyCart,
+        setIsBtnEmptyCart,
+        handleIncreaseCounter,
+        handleDecreaseCounter,
+        handleDelte,
+        handleDelteAllItems,
+        isBodyHidden, setIsBodyHidden } = useContext(CartContext);
+
+
+
+
+
+
+
+
 
     const settings = {
         infinite: true,
@@ -49,6 +78,22 @@ const TopTrending = () => {
             }
         ]
     };
+
+    // const handleClick = (item) => {
+    //     let isPresent = false;
+    //     cart.forEach((product) => {
+    //         if (item.pId === product.id)
+    //             isPresent = true;
+    //     })
+    //     if (isPresent) {
+
+    //         return;
+    //     }
+    //     setCart([...cart, item]); 
+    // }
+
+
+
 
     return (
         <div className='top-trending'>

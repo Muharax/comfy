@@ -92,7 +92,7 @@ const FormRgister = (props) => {
         <>
             <form action="" onSubmit={handleRegisterSubmit} noValidate>
                 <div className="form-group">
-                    <label className="mb-1" htmlFor='registerName'>Full Name<span className="text-danger">*</span></label>
+                    <label className="mb-1" htmlFor='registerName'>Full Name<span className="text-danger"> *</span></label>
                     <input
                         type="text"
                         className="form-control"
@@ -105,7 +105,7 @@ const FormRgister = (props) => {
                     {errors.r_username && <p className="text-danger show-error">{errors.r_username}</p>}
                 </div>
                 <div className="form-group mt-2">
-                    <label className="mb-1" htmlFor='registerEmail'>Email<span className="text-danger">*</span></label>
+                    <label className="mb-1" htmlFor='registerEmail'>Email<span className="text-danger"> *</span></label>
                     <input
                         type="email"
                         className="form-control"
@@ -118,7 +118,7 @@ const FormRgister = (props) => {
                     {errors.r_email && <p className="text-danger show-error">{errors.r_email}</p>}
                 </div>
                 <div className="form-group mt-2">
-                    <label className="mb-1" htmlFor='registerPass'>Password<span className="text-danger">*</span></label>
+                    <label className="mb-1" htmlFor='registerPass'>Password<span className="text-danger"> *</span></label>
                     <div className="position-relative">
                         <input
                             type={!props.RegisterIconClicked ? "password" : "text"}
@@ -134,7 +134,7 @@ const FormRgister = (props) => {
                     {errors.r_pass && <p className="text-danger show-error">{errors.r_pass}</p>}
                 </div>
                 <div className="form-group mt-2">
-                    <label className="mb-1" htmlFor='registerconPass'>Confirm Password<span className="text-danger">*</span></label>
+                    <label className="mb-1" htmlFor='registerconPass'>Confirm Password<span className="text-danger"> *</span></label>
                     <input
                         type="password"
                         className="form-control"

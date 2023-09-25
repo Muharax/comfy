@@ -2,11 +2,12 @@
     border-top: 1px solid #dee2e6;
     background-color: #fff;
     position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     width: 100%;
     bottom: 0;
     padding: 7px 0;
-    z-index: 700000;
+    z-index: 70;
+    display: none;
 }
 
 .bottom-search .search {
@@ -50,4 +51,14 @@ a.icon-badge span {
     text-align: center;
     line-height: 13px;
     border-radius: 9px;
+}
+
+/*====================================*/
+/*===========Responsive===============*/
+/*====================================*/
+
+@media only screen and (max-width: 991px){
+    .bottom-search{
+        display: block;
+    }
 }

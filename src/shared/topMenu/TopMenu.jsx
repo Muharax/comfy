@@ -8,6 +8,7 @@ import { FaUser, FaMagnifyingGlass, FaCartShopping, FaUnlock } from "react-icons
 import { useEffect, useState, useContext } from 'react';
 import { OpenModalContext } from "../../context/OpenModalContext";
 import { AuthContext } from '../../context/AuthContext';
+import { CartContext } from '../../context/CartContext';
 
 /*======================================*/
 /*======================================*/
@@ -15,9 +16,27 @@ import { AuthContext } from '../../context/AuthContext';
 
 const TopMenu = () => {
 
-  const { setShowCartModal, showCartModal, setShowRegisterModal } = useContext(OpenModalContext);
+  const { showCartModal,setShowCartModal, setShowRegisterModal } = useContext(OpenModalContext);
 
   const { existUser } = useContext(AuthContext);
+
+  const {
+    cart , 
+        setCart,
+        handleClick,
+        productsInTable,
+        setProducsInTable,
+        productCounter,
+        setProductCounter,
+        isDiseable,
+        setIsDesable,
+        isBtnEmptyCart,
+        setIsBtnEmptyCart,
+        handleIncreaseCounter,
+        handleDecreaseCounter,
+        handleDelte,
+        handleDelteAllItems,
+        isBodyHidden, setIsBodyHidden} = useContext(CartContext);
 
 
 
@@ -36,11 +55,41 @@ const TopMenu = () => {
 
   // give active class for link depend on location,and change the overflow of body depend is cart modal show or not
   useEffect(() => {
-    const body = document.querySelector('body');
-    body.style.overflow = showCartModal ? 'hidden' : 'auto';
-    setUrl(location.pathname);
+    // const body = document.querySelector('body');
+    // body.style.overflow = isBodyHidden ? 'hidden' : 'visible';
+   // setIsBodyHidden(false)
 
-  }, [location, showCartModal]);
+  
+
+
+
+
+    setUrl(location.pathname); 
+
+
+  }, [location]);
+
+
+
+  // console.log("isBodyHidden from top : " + isBodyHidden);
+  // console.log("showCartModal from top : " + showCartModal);
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   return (
     <div className='topmenu'>
@@ -68,7 +117,7 @@ const TopMenu = () => {
               <Nav.Link as={Link} to={"/search"}><FaMagnifyingGlass /></Nav.Link>
               <Nav.Link href="" className='icon-badge'>
                 <FaCartShopping onClick={() => existUser ? setShowCartModal(true) : setShowRegisterModal(true)} />
-                <span>2</span>
+                <span>{existUser ? cart.length :"0"}</span>
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

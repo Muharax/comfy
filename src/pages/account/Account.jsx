@@ -1,12 +1,8 @@
 import './account.css';
-import { Navigate, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { Outlet, useLocation, useNavigate, Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../../context/AuthContext';
 import { OpenModalContext } from '../../context/OpenModalContext';
-import OrderAcoordion from '../../components/OrderAcoordion';
-import FormAccount from '../../components/FormAccount';
-import FormUpdatePass from '../../components/FormUpdatePass';
 
 /*======================================*/
 /*======================================*/
@@ -18,12 +14,19 @@ const Account = () => {
   const therIsProduct = true;
 
   const location = useLocation();
+
   const navigate = useNavigate();
 
+  /*
+  this variable in order to redirect the user to home page in case user logout succecfuly
+  and prevent the user to back to account page again when logout 
+  */
+  const redirectPath = location.state?.path || "/";
+
+  // get the name of path in page in oreder to put the active class on link that matching
   const getLinkPath = location.pathname.split("/")[2];
 
-
-  const { existUser, setExitstUser } = useContext(AuthContext);
+  const { logout } = useContext(AuthContext);
 
   const { setShowRegisterModal } = useContext(OpenModalContext);
 
@@ -31,13 +34,13 @@ const Account = () => {
 
   let getUserName = localStorage.getItem('user') !== null && (JSON.parse(localStorage.getItem("user"))).r_username;
 
-  const handleLogout = (e) => { 
+  const handleLogout = (e) => {
 
-    setExitstUser(false);
-
-    navigate("/", { replace: true });
+    logout()
 
     setShowRegisterModal(false);
+
+    navigate(redirectPath, { replace: true });
 
   }
 
@@ -52,17 +55,14 @@ const Account = () => {
           <button onClick={handleLogout}>logout</button>
         </div>
         <div className="account-tabs">
-
+          <div>
           <ul className="account-link-lists list-unstyled m-0 d-flex">
             <li><Link to="/account/myOrder" className={getLinkPath === "myOrder" ? "active" : ""}>My Order</Link></li>
             <li><Link to="/account/accountInfo" className={getLinkPath === "accountInfo" ? "active" : ""}>Account info</Link></li>
             <li><Link to="/account/changePassword" className={getLinkPath === "changePassword" ? "active" : ""}>Change password</Link></li>
           </ul>
-          <Routes>
-            <Route path="myOrder" element={<OrderAcoordion />} />
-            <Route path="accountInfo" element={<FormAccount />} />
-            <Route path="changePassword" element={<FormUpdatePass />} />
-          </Routes>
+          </div>
+          <Outlet />
         </div>
         {/* end account tabs */}
       </div>

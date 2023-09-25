@@ -1,13 +1,11 @@
 import './modalRegister.css';
-import Modal from 'react-bootstrap/Modal';
 import { useContext, useState } from 'react';
+import Modal from 'react-bootstrap/Modal';
 import { OpenModalContext } from "../../context/OpenModalContext";
-import { AuthContext } from "../../context/AuthContext";
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import FormRgister from '../FormRgister';
 import FormLogin from '../FormLogin';
-import AlertMsg from '../alertMsg/AlertMsg';
 
 /*======================================*/
 /*======================================*/
@@ -15,11 +13,8 @@ import AlertMsg from '../alertMsg/AlertMsg';
 
 const ModalRegister = () => {
 
-    const {handleNewUser, showRegisterModal, handleShowRegisterModal, handleCloseRegisterModal } = useContext(OpenModalContext);
+    const { showRegisterModal, handleShowRegisterModal, handleCloseRegisterModal } = useContext(OpenModalContext);
 
-    // const { isRegisterSubmit ,existUser} = useContext(AuthContext);
-
-    //const [newUser, setNewUser] = useState(existUser);
     // thiis for the tab login input 
     const [loginIconClicked, setLoginIconClicked] = useState(false);
 
@@ -48,12 +43,14 @@ const ModalRegister = () => {
 
     return (
         <div className='modal-register'>
-
             {/* backdrop="static" in order to prevent to close the modal when click on body modal  */}
-            <Modal show={showRegisterModal} onHide={handleShowRegisterModal} centered className='modal-register-box' backdrop="static">
-
-                
-
+            <Modal
+                show={showRegisterModal}
+                onHide={handleShowRegisterModal}
+                scrollable={true}
+                centered
+                className='modal-register-box'
+                backdrop="static">
                 {/* when clsoe the modal back to first tab when click close btn */}
                 <Modal.Header closeButton onClick={handleClick}>
                 </Modal.Header>
@@ -69,11 +66,9 @@ const ModalRegister = () => {
                             <FormLogin
                                 loginIconClicked={loginIconClicked}
                                 handleChangeIconLoginPass={handleChangeIconLoginPass}
-                                
                                 setCurrentTab={setCurrentTab}
                             />
                         </Tab>
-
                         <Tab eventKey={2} title="REGISTER">
                             <FormRgister
                                 RegisterIconClicked={RegisterIconClicked}

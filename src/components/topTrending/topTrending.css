@@ -101,6 +101,7 @@
     position: absolute;
     left: 50%;
     bottom: 16px;
+    padding: 20px 0;
     width: 90%;
     height: 33px;
     border: none;
@@ -113,6 +114,10 @@
     transition: opacity .4s, transform .3s ease, background-color .2s ease;
     opacity: 0;
     cursor: pointer;
+}
+
+.image-hover .image-hover-top button div{
+    pointer-events: none;
 }
 
 .image-hover .image-hover-top button .spinner-border {
@@ -129,6 +134,7 @@
     font-size: 15px;
     font-weight: 700;
     line-height: 0;
+    pointer-events: none;
 }
 
 .image-hover .image-hover-top:hover button {
@@ -148,7 +154,11 @@
 .single .image-hover .single-desc h4 {
     margin: 0;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 700; 
+}
+
+.single .image-hover .single-desc h4 a:hover {
+   color: #c7ab62;
 }
 
 .single .image-hover .single-desc .price {

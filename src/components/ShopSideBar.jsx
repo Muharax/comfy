@@ -1,11 +1,31 @@
 import { useEffect } from "react";
 import { AllProductsItems } from "../config/data";
+import ShopSideBarSmall from "./ShopSideBarSmall";
 
 /*======================================*/
 /*======================================*/
 /*======================================*/
 
-const ShopSideBar = ({ products, setProducts, price, setPrice, handlePriceInput, min, max }) => {
+{/* 
+
+
+*/}
+
+const ShopSideBar = (props) => {
+    const {
+        products,
+        setProducts,
+        price,
+        setPrice,
+        handlePriceInput,
+        price2, setPrice2,handlePriceInput2,
+
+        min,
+        max,
+        showSmallSideBar,
+        handleCloseShowSmallSideBar } = props;
+
+
     useEffect(() => {
 
         //by default make the products sorting by it id
@@ -37,60 +57,97 @@ const ShopSideBar = ({ products, setProducts, price, setPrice, handlePriceInput,
     };
 
     return (
-        <div className="right">
-            <form action="">
-                <div className="form-cat-filters">
-                    <div className="cat-filter-box">
-                        <h3 className='underline-heading'>Categories</h3>
-                        <div className="cat-filter-single">
-                            <input type="radio" className="form-check-input" name="categories" id='all-cat' defaultChecked />
-                            <label htmlFor="all-cat" className='main-cat-label'>All Categories</label>
-                        </div>
-                        {categoryList.map((item, i) => (
-                            <div className="cat-filter-single" key={i}>
-                                <input type="radio" className="form-check-input" name="categories" id={item} />
-                                <label htmlFor={item}>{item}</label>
+        <>
+
+            <div className="right">
+                <form action="">
+                    <div className="form-cat-filters">
+                        <div className="cat-filter-box">
+                            <h3 className='underline-heading'>Categories</h3>
+                            <div className="cat-filter-single">
+                                <input type="radio" className="form-check-input" name="categories" id='all-cat' defaultChecked />
+                                <label htmlFor="all-cat" className='main-cat-label'>All Categories</label>
                             </div>
-                        ))}
-                    </div>
-                    {/* end cat filter box */}
-
-                    <div className="brands-filter-box">
-                        <h3 className='underline-heading'>Brands</h3>
-                        <div className="cat-filter-single">
-                            <input type="radio" className="form-check-input" name="brands" id='all-brands' defaultChecked />
-                            <label htmlFor="all-brands" className='main-cat-label'>All Brands</label>
+                            {categoryList.map((item, i) => (
+                                <div className="cat-filter-single" key={i}>
+                                    <input type="radio" className="form-check-input" name="categories" id={item} />
+                                    <label htmlFor={item}>{item}</label>
+                                </div>
+                            ))}
                         </div>
-                        {brandList.map((item, i) => (
-                            <div className="cat-filter-single" key={i}>
-                                <input type="radio" className="form-check-input" name="brands" id={item} />
-                                <label htmlFor={item}>{item}</label>
+                        {/* end cat filter box */}
+
+                        <div className="brands-filter-box">
+                            <h3 className='underline-heading'>Brands</h3>
+                            <div className="cat-filter-single">
+                                <input type="radio" className="form-check-input" name="brands" id='all-brands' defaultChecked />
+                                <label htmlFor="all-brands" className='main-cat-label'>All Brands</label>
                             </div>
-                        ))}
-                    </div>
-                    {/* end brands filter bod*/}
-
-                    <div className="brands-filter-box">
-                        <h3 className='underline-heading'>Price</h3>
-                        <input
-                            type="range"
-                            defaultValue={max}
-                            onChange={handlePriceInput}
-                            min={min}
-                            max={max}
-                            style={sliderStyle}
-                        />
-                        <div className="range-price-value">
-                            <span>{min}$</span>
-                            <span>{price}$</span>
-                            <span>{max}$</span>
+                            {brandList.map((item, i) => (
+                                <div className="cat-filter-single" key={i}>
+                                    <input type="radio" className="form-check-input" name="brands" id={item} />
+                                    <label htmlFor={item}>{item}</label>
+                                </div>
+                            ))}
                         </div>
-                    </div>
-                    {/* end price filter bod*/}
+                        {/* end brands filter bod*/}
 
-                </div>
-            </form>
-        </div>
+                        <div className="brands-filter-box">
+                            <h3 className='underline-heading'>Price</h3>
+                            <input
+                                type="range"
+                                defaultValue={max}
+                                onChange={handlePriceInput}
+                                min={min}
+                                max={max}
+                                style={sliderStyle}
+                            />
+                            <div className="range-price-value">
+                                <span>{min}$</span>
+                                <span>{price}$</span>
+                                <span>{max}$</span>
+                            </div>
+                        </div>
+                        {/* end price filter bod*/}
+
+                    </div>
+                </form>
+            </div> 
+
+{/*  
+ 
+        ,
+        ,
+        ,
+         
+        ,
+        ,
+        
+        
+*/}
+        
+            <ShopSideBarSmall
+            products={products}
+            setProducts={setProducts}
+            price={price}
+            setPrice={setPrice}
+            handlePriceInput={handlePriceInput}
+            min={min}
+            max={max}
+
+
+
+
+
+                showSmallSideBar={showSmallSideBar}
+                handleCloseShowSmallSideBar={handleCloseShowSmallSideBar}
+                brandList={brandList}
+                categoryList={categoryList}
+                percentage={percentage}
+                sliderStyle={sliderStyle} 
+            />
+
+        </>
     )
 }
 

@@ -76,7 +76,7 @@ const FormLogin = ({ loginIconClicked, handleChangeIconLoginPass, setCurrentTab 
         <>
             <form action="" onSubmit={handleLoginSubmit} noValidate>
                 <div className="form-group">
-                    <label className="mb-1" htmlFor='loginEmail'>Email<span className="text-danger">*</span></label>
+                    <label className="mb-1" htmlFor='loginEmail'>Email<span className="text-danger"> *</span></label>
                     <input
                         type="email"
                         className="form-control"
@@ -91,7 +91,7 @@ const FormLogin = ({ loginIconClicked, handleChangeIconLoginPass, setCurrentTab 
                 </div>
 
                 <div className="form-group mt-2">
-                    <label className="mb-1" htmlFor='loginPass'>Password<span className="text-danger">*</span></label>
+                    <label className="mb-1" htmlFor='loginPass'>Password<span className="text-danger"> *</span></label>
                     <div className="position-relative">
                         <input
                             type={!loginIconClicked ? "password" : "text"}

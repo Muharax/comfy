@@ -4,6 +4,7 @@ import Accordion from "react-bootstrap/Accordion";
 import { FaInstagram, FaFacebookF, FaLinkedin, FaGithub, FaPhoneVolume, FaEnvelope } from "react-icons/fa6";
 import Logo from "../../assets/images/logo-footer.png";
 import { Link } from 'react-router-dom';
+import { BottomSearch } from '../../allPagesPaths';
 
 /*======================================*/
 /*======================================*/
@@ -135,6 +136,7 @@ const FooterSection = () => {
             <div className="footer-copyright">
                 <p>&copy; Copyright 2023 Comfy Store. All Rights Reserved. Design By Team3-ITI</p>
             </div>
+            <BottomSearch/>
         </div>
     )
 }

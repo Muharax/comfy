@@ -1,11 +1,12 @@
 import { LiaAngleDownSolid } from "react-icons/lia";
 import SingleProductUi from './topTrending/SingleProductUi';
+import { FaFilter } from "react-icons/fa6";
 
 /*======================================*/
 /*======================================*/
 /*======================================*/
 
-const AllShopProducts = ({records, products, setProducts, filterPriceByRange }) => {
+const AllShopProducts = ({ records, products, setProducts, filterPriceByRange, handleShowSmallSideBar }) => {
 
     // Sort products by price
     function sortProductsByPrice(e) {
@@ -36,6 +37,11 @@ const AllShopProducts = ({records, products, setProducts, filterPriceByRange }) 
                 <p className="pages-number mb-0">
                     Showing page <span>1</span> of <span>2</span> pages
                 </p>
+
+                {/* this btn will show the sidebar section in small devices */}
+                <button className="show-sidebar" onClick={handleShowSmallSideBar}><FaFilter /> Filters</button>
+
+
                 <div className="select-box">
                     <select name="" id="start" onChange={handleSelectChange}>
                         <option value="Default" >Default</option>

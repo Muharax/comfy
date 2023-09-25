@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { createContext, useState } from "react";
 
 /*======================================*/
@@ -8,29 +9,38 @@ export const OpenModalContext = createContext();
 
 export const OpenModalContextProvider = ({ children }) => {
 
-   
-
-
-
-
-// const handleNewUser =(e)=>{
-//     e.preventDefault();
-//     setExitstUser(true)
-// }
-
-
-
-
-
-
-
-
-
-
-
-
     // for cart modal
     const [showCartModal, setShowCartModal] = useState(false);
+    const handleShowCartModal = () => setShowCartModal(true);
+    const handleCloseShowCartModal = () => setShowCartModal(false);
+
+    // this for slider product details
+    const [openProductSlider,setOpenProductSlider]= useState(false);
+
+    // this will open the slider that in every product details
+    const handleOpenSlider = () => {
+        setOpenProductSlider(true); 
+    }
+
+    const handleCloseSlider = () => {
+        setOpenProductSlider(false); 
+    }
+
+
+
+
+    useEffect(() => {
+        if (document) {
+            document.body.style.overflow = openProductSlider ? "hidden" : "auto";
+        }
+    }, [openProductSlider])
+
+
+
+
+
+
+
 
     // for register modal
     const [showRegisterModal, setShowRegisterModal] = useState(false);
@@ -41,15 +51,18 @@ export const OpenModalContextProvider = ({ children }) => {
 
     return (
         <OpenModalContext.Provider value={{
-             
             showCartModal,
+
             setShowCartModal,
+            handleShowCartModal,
+            handleCloseShowCartModal,
+
+
             showRegisterModal,
             setShowRegisterModal,
             handleShowRegisterModal,
             handleCloseRegisterModal,
-            
-            
+            openProductSlider,setOpenProductSlider,handleOpenSlider,handleCloseSlider
         }}
         >
             {children}

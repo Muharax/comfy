@@ -24,6 +24,37 @@ import chesterSofa_h from "../../src/assets/images/top trending/chesterSofa-h.jp
 import aeronChair_o from "../../src/assets/images/top trending/aeronChair-o.jpg";
 import aeronChair_h from "../../src/assets/images/top trending/aeronChair-h.jpg";
 
+/*=========================================*/
+// single product details imags
+import product1A from "../../src/assets/images/top trending/single details product/product1A.jpg";
+import product1B from "../../src/assets/images/top trending/single details product/product1B.jpg";
+import product2A from "../../src/assets/images/top trending/single details product/product2A.jpg";
+import product2B from "../../src/assets/images/top trending/single details product/product2B.jpg";
+import product3A from "../../src/assets/images/top trending/single details product/product3A.jpg";
+import product3B from "../../src/assets/images/top trending/single details product/product3B.jpg";
+
+import product4A from "../../src/assets/images/top trending/single details product/product4A.jpg";
+import product4B from "../../src/assets/images/top trending/single details product/product4B.jpg";
+import product4C from "../../src/assets/images/top trending/single details product/product4C.jpg";
+
+import product5A from "../../src/assets/images/top trending/single details product/product5A.jpg";
+import product5B from "../../src/assets/images/top trending/single details product/product5B.jpg";
+import product6A from "../../src/assets/images/top trending/single details product/product6A.jpg";
+import product6B from "../../src/assets/images/top trending/single details product/product6B.jpg";
+import product7A from "../../src/assets/images/top trending/single details product/product7A.jpg";
+import product7B from "../../src/assets/images/top trending/single details product/product7B.jpg";
+import product8A from "../../src/assets/images/top trending/single details product/product8A.jpg";
+import product8B from "../../src/assets/images/top trending/single details product/product8B.jpg";
+import product9A from "../../src/assets/images/top trending/single details product/product9A.jpg";
+import product9B from "../../src/assets/images/top trending/single details product/product9B.jpg";
+import product10A from "../../src/assets/images/top trending/single details product/product10A.jpg";
+import product10B from "../../src/assets/images/top trending/single details product/product10B.jpg";
+import product11A from "../../src/assets/images/top trending/single details product/product11A.jpg";
+import product11B from "../../src/assets/images/top trending/single details product/product11B.jpg";
+import product12A from "../../src/assets/images/top trending/single details product/product12A.jpg";
+import product12B from "../../src/assets/images/top trending/single details product/product12B.jpg";
+
+/*=========================================*/
 
 // brands slider imags
 import axios from "../../src/assets/images/brandSlider/axios.png";
@@ -45,7 +76,7 @@ import img6 from "../../src/assets/images/instaposts/6.jpg";
 /*======================================*/
 /*======================================*/
 /*======================================*/
-//axios,ra,tidy,git lab,leo,dark universe
+
 export const AllProductsItems = [
     {
         pId: 1,
@@ -56,7 +87,14 @@ export const AllProductsItems = [
         pBrand: "ra",
         pPrice: "254",
         pSalePrice: "4",
-        outOfStock: false
+        outOfStock: false,
+        pcolor: "#40407a",
+        pInStock: "3",
+        pQty: 1,
+        pInLocalStorage: false,
+        pImgArray: [product1B, product1A],
+        pColorsArray: ['rgb(34, 34, 34)'],
+        pShortDesc: "The perfect blend of modern design and ultimate comfort. Our chair features a unique cloud-like shape, providing the ultimate relaxation experience. The seat and backrest are upholstered in a soft and luxurious velvet fabric, providing a comfortable and cozy seating experience. It's designed with ergonomic principles in mind to support your body's natural posture and reduce stress on your back and shoulders. The chair's sturdy metal base provides stability and ensures durability, while the 360-degree swivel feature allows for easy movement and flexibility."
     },
     {
         pId: 2,
@@ -67,7 +105,14 @@ export const AllProductsItems = [
         pBrand: "tidy",
         pPrice: "762",
         pSalePrice: "9",
-        outOfStock: false
+        outOfStock: false,
+        pcolor: "#ff5252",
+        pInStock: "2",
+        pQty: 1,
+        pInLocalStorage: false,
+        pImgArray: [product2B, product2A],
+        pColorsArray: ['rgb(227, 154, 38)', 'rgb(34, 34, 34)'],
+        pShortDesc: "The perfect addition to your dining room or kitchen. Our table features a sleek and modern design that will complement any decor style. The table is made of high-quality wood, ensuring durability and longevity. The table's sturdy legs provide stability and ensure the table will last for years to come. The legs are made of solid wood, adding to the table's durability and providing a stylish touch. The table's compact size fits perfectly in small spaces, making it ideal for apartments or cozy dining areas. Order your Pillar Dining Table Round today and experience the ultimate in comfort and style."
     },
     {
         pId: 3,
@@ -78,7 +123,14 @@ export const AllProductsItems = [
         pBrand: "tidy",
         pPrice: "1385",
         pSalePrice: "",
-        outOfStock: true
+        outOfStock: true,
+        pcolor: "#218c74",
+        pInStock: "0",
+        pQty: 1,
+        pInLocalStorage: false,
+        pImgArray: [product3B, product3A],
+        pColorsArray: ['rgb(177, 99, 99)'],
+        pShortDesc: "The perfect addition to your home decor collection. Our vase features a unique and eye-catching design that is sure to impress. The vase is made of high-quality ceramic, ensuring durability and longevity. The Namaste Vase is designed with a beautiful and intricate lotus flower pattern, which symbolizes purity, enlightenment, and self-regeneration. The vase's serene white color adds a touch of elegance to any room, while its curved shape and slim neck make it perfect for displaying your favorite flowers or greenery. Order your Namaste Vase today and add a touch of serenity and elegance to your home decor."
     },
     {
         pId: 4,
@@ -89,7 +141,14 @@ export const AllProductsItems = [
         pBrand: "axios",
         pPrice: "188",
         pSalePrice: "",
-        outOfStock: false
+        outOfStock: false,
+        pcolor: "#84817a",
+        pInStock: "9",
+        pQty: 1,
+        pInLocalStorage: false,
+        pImgArray: [product4A, product4B, product4C],
+        pColorsArray: ['rgb(255, 255, 255)', 'rgb(34, 34, 34)', 'rgb(252, 229, 205)'],
+        pShortDesc: "The perfect blend of modern design and ultimate comfort. Our chair features a unique cloud-like shape, providing the ultimate relaxation experience. The seat and backrest are upholstered in a soft and luxurious velvet fabric, providing a comfortable and cozy seating experience. It's designed with ergonomic principles in mind to support your body's natural posture and reduce stress on your back and shoulders. The chair's sturdy metal base provides stability and ensures durability, while the 360-degree swivel feature allows for easy movement and flexibility."
     },
     {
         pId: 5,
@@ -100,7 +159,14 @@ export const AllProductsItems = [
         pBrand: "leo",
         pPrice: "2143",
         pSalePrice: "13",
-        outOfStock: false
+        outOfStock: false,
+        pcolor: "#34495e",
+        pInStock: "3",
+        pQty: 1,
+        pInLocalStorage: false,
+        pImgArray: [product5A, product5B],
+        pColorsArray: ['rgb(128, 128, 128)'],
+        pShortDesc: "The perfect addition to your living room or family room. Our sofa features a sleek and modern design that will complement any decor style. The sofa is upholstered in a soft and durable linen fabric, providing a comfortable and cozy seating experience. Whether you're entertaining guests, watching TV, or just relaxing with a good book, the Mags Sofa 2.5 Seater is the perfect place to do so. Its spacious seating area comfortably accommodates up to three people, making it ideal for families or those who love to entertain. Order your Mags Sofa 2.5 Seater today and experience the ultimate in comfort and style."
     },
     {
         pId: 6,
@@ -111,7 +177,14 @@ export const AllProductsItems = [
         pBrand: "dark universe",
         pPrice: "455",
         pSalePrice: "",
-        outOfStock: true
+        outOfStock: true,
+        pcolor: "#ccae62",
+        pInStock: "0",
+        pQty: 1,
+        pInLocalStorage: false,
+        pImgArray: [product6A, product6B],
+        pColorsArray: ['rgb(227, 154, 38)'],
+        pShortDesc: "The perfect addition to your dining room or kitchen. Our table features a sleek and modern design that will complement any decor style. The table is made of high-quality wood, ensuring durability and longevity. The table's sturdy legs provide stability and ensure the table will last for years to come. The legs are made of solid wood, adding to the table's durability and providing a stylish touch. The table's compact size fits perfectly in small spaces, making it ideal for apartments or cozy dining areas. Order your Pillar Dining Table Round today and experience the ultimate in comfort and style."
     },
     {
         pId: 7,
@@ -122,7 +195,14 @@ export const AllProductsItems = [
         pBrand: "git lab",
         pPrice: "877",
         pSalePrice: "",
-        outOfStock: false
+        outOfStock: false,
+        pcolor: "#6D214F",
+        pInStock: "5",
+        pQty: 1,
+        pInLocalStorage: false,
+        pImgArray: [product7A, product7B],
+        pColorsArray: ['rgb(128, 128, 128)', 'rgb(34, 34, 34)'],
+        pShortDesc: "The perfect addition to your home decor collection. Our pendant light features a unique and modern design that will add a touch of elegance to any room. The light is made of high-quality metal and glass, ensuring durability and longevity. The Spinning pendant lamp is designed with a stunning glass shade, which diffuses the light and creates a warm and inviting atmosphere. The light's sleek and simple design adds a touch of sophistication to any space, while its adjustable cord allows for customized hanging height. Order your Spinning pendant lamp today and experience the ultimate in comfort and style in your home."
     },
     {
         pId: 8,
@@ -133,7 +213,14 @@ export const AllProductsItems = [
         pBrand: "axios",
         pPrice: "987",
         pSalePrice: "",
-        outOfStock: false
+        outOfStock: false,
+        pcolor: "#474787",
+        pInStock: "2",
+        pQty: 1,
+        pInLocalStorage: false,
+        pImgArray: [product8A, product8B],
+        pColorsArray: ['rgb(128, 128, 128)'],
+        pShortDesc: "The perfect addition to your living room or family room. Our sofa features a sleek and modern design that will complement any decor style. The sofa is upholstered in a soft and durable linen fabric, providing a comfortable and cozy seating experience. Whether you're entertaining guests, watching TV, or just relaxing with a good book, the Mundo Sofa With Cushion is the perfect place to do so. Its spacious seating area comfortably accommodates up to three people, making it ideal for families or those who love to entertain. Order your Mundo Sofa With Cushion today and experience the ultimate in comfort and style."
     },
     {
         pId: 9,
@@ -144,7 +231,14 @@ export const AllProductsItems = [
         pBrand: "git lab",
         pPrice: "469",
         pSalePrice: "8",
-        outOfStock: false
+        outOfStock: false,
+        pcolor: "#D6A2E8",
+        pInStock: "1",
+        pQty: 1,
+        pInLocalStorage: false,
+        pImgArray: [product9A, product9B],
+        pColorsArray: ['rgb(211, 211, 211)'],
+        pShortDesc: "The Amp Pendant Light Large is designed with a stunning glass shade, which diffuses the light and creates a warm and inviting atmosphere. The light's sleek and simple design adds a touch of sophistication to any space, while its adjustable cord allows for customized hanging height. The light's sturdy metal frame provides stability and ensures the light will last for years to come. The frame is made of durable metal, adding to the light's durability and providing a stylish touch. The light's compact size fits perfectly in small spaces, making it ideal for apartments or cozy living areas. Order your Amp Pendant Light Large today and experience the ultimate in comfort and style in your home."
     },
     {
         pId: 10,
@@ -155,7 +249,14 @@ export const AllProductsItems = [
         pBrand: "dark universe",
         pPrice: "74",
         pSalePrice: "",
-        outOfStock: false
+        outOfStock: false,
+        pcolor: "#EAB543",
+        pInStock: "6",
+        pQty: 1,
+        pInLocalStorage: false,
+        pImgArray: [product10A, product10B],
+        pColorsArray: ['rgb(255, 255, 255)', 'rgb(34, 34, 34)'],
+        pShortDesc: "The perfect addition to your dining room or kitchen. Our table features a sleek and modern design that will complement any decor style. The table is made of high-quality wood, ensuring durability and longevity. The table's sturdy legs provide stability and ensure the table will last for years to come. The legs are made of solid wood, adding to the table's durability and providing a stylish touch. The table's compact size fits perfectly in small spaces, making it ideal for apartments or cozy dining areas. Order your Pillar Dining Table Round today and experience the ultimate in comfort and style."
     },
     {
         pId: 11,
@@ -166,7 +267,14 @@ export const AllProductsItems = [
         pBrand: "dark universe",
         pPrice: "3788",
         pSalePrice: "",
-        outOfStock: false
+        outOfStock: false,
+        pcolor: "#BDC581",
+        pInStock: "0",
+        pQty: 1,
+        pInLocalStorage: false,
+        pImgArray: [product11A, product11B],
+        pColorsArray: ['rgb(223, 144, 60)', 'rgb(34, 34, 34)'],
+        pShortDesc: "The perfect addition to your living room or family room. Our sofa features a sleek and modern design that will complement any decor style. The sofa is upholstered in a soft and durable linen fabric, providing a comfortable and cozy seating experience. Whether you're entertaining guests, watching TV, or just relaxing with a good book, the Chesterfield Sofa is the perfect place to do so. Its spacious seating area comfortably accommodates up to three people, making it ideal for families or those who love to entertain. Order Chesterfield Sofa today and experience the ultimate in comfort and style."
     },
     {
         pId: 12,
@@ -177,7 +285,14 @@ export const AllProductsItems = [
         pBrand: "leo",
         pPrice: "85",
         pSalePrice: "",
-        outOfStock: false
+        outOfStock: false,
+        pcolor: "#227093",
+        pInStock: "5",
+        pQty: 1,
+        pInLocalStorage: false,
+        pImgArray: [product12A, product12B],
+        pColorsArray: ['rgb(11, 83, 148)', 'rgb(128, 128, 128)'],
+        pShortDesc: "The perfect blend of modern design and ultimate comfort. Our chair features a unique cloud-like shape, providing the ultimate relaxation experience. The seat and backrest are upholstered in a soft and luxurious velvet fabric, providing a comfortable and cozy seating experience. It's designed with ergonomic principles in mind to support your body's natural posture and reduce stress on your back and shoulders. The chair's sturdy metal base provides stability and ensures durability, while the 360-degree swivel feature allows for easy movement and flexibility."
     }
 ];
 
