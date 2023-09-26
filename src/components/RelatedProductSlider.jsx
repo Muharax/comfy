@@ -3,11 +3,11 @@ import SingleProductUi from "./topTrending/SingleProductUi";
 
 /*======================================*/
 /*======================================*/
-/*======================================*/ 
+/*======================================*/
 
 const RelatedProductSlider = (props) => {
 
-    const { relatedProductCategory, Slider, settings } = props;
+    const { relatedProductCategory, Slider, settings, isMobile } = props;
 
     return (
         <div className="related-products">
@@ -18,8 +18,9 @@ const RelatedProductSlider = (props) => {
                     here we make a condition if the related product number [greater than 4] prodcuts show the slider  
                     if the related product number is less than 4 [maping them] and put it in custom div in order 
                     to take some different sytle
+                    in responsive we show the slider as well
                     */}
-                    {relatedProductCategory.length >= 4 ?
+                    {relatedProductCategory.length >= 4 || isMobile ?
                         <>
                             <Slider {...settings}>
                                 {relatedProductCategory.map((data) => (

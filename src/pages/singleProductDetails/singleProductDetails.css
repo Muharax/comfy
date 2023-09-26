@@ -296,5 +296,15 @@
         bottom: 60px;
     }
 
+    .single-product-details .single-product-details-box .related-products .single .image-hover .image-hover-top button{
+        padding: 0;
+          
+          height: 33px;
+      }
+
+    .single-product-details .single-product-details-box .related-products .single .image-hover .image-hover-top button>span {
+        font-size: 14px;
+   }
+
 
 }

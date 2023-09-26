@@ -13,7 +13,7 @@ function OrderConfirmed() {
     // get the first name by split getUserName in loclastorage
     let firstName = getUserName.split(" ")[0];
 
-    
+
 
     return (
         <div className='order-confirmed-box'>
@@ -34,7 +34,7 @@ function OrderConfirmed() {
                 </div>
                 <div>
                     <h6>Billing Address</h6>
-                    <p>ww, Ehnasia, Beni Suef</p>
+                    <p>Baabda, Beirut gov, Lebanon</p>
                 </div>
                 <div>
                     <h6>Payment Method</h6>

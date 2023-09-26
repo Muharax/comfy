@@ -47,8 +47,10 @@ const SingleProductDetails = () => {
     const [isCheck, setIsCheck] = useState(false);
 
     // get the active classname ,initialy the first element get the active classname
-    const [active, setActive] = useState(0);
+    const [active, setActive] = useState(0); 
 
+    // check is screen for mobile or not
+    const [isMobile, setIsMobile] = useState(false);
     /*==================================================*/
 
     const handleCheck = () => {
@@ -78,6 +80,23 @@ const SingleProductDetails = () => {
         itemsEls.current[0].click();
     }, [id])
 
+    /*==================================================*/
+
+    
+
+    useEffect(() => {
+
+        if (window.innerWidth < 575.98) {
+
+            setIsMobile(true);
+
+        } else {
+
+            setIsMobile(false);
+
+        }
+
+    }, []);
     /*==================================================*/
 
     const settings = {
@@ -129,6 +148,7 @@ const SingleProductDetails = () => {
                             setActive={setActive}
                             itemsEls={itemsEls}
                             id={id}
+                            isMobile={isMobile}
                         />
 
                         {/* show the overlay that contain the slider imgs for every single produc,based on openProductSlider  */}
@@ -156,6 +176,7 @@ const SingleProductDetails = () => {
                     relatedProductCategory={relatedProductCategory}
                     Slider={Slider}
                     settings={settings}
+                    isMobile={isMobile}
                 />
             </div>
             {/* end single-product-details-box */}

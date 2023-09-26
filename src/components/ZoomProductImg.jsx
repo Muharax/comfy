@@ -14,25 +14,25 @@ const ZoomProductImg = (props) => {
         setcurrentImageURL,
         active,
         setActive,
-        itemsEls, id } = props;
+        itemsEls, id ,isMobile} = props;
 
     const { openProductSlider, handleOpenSlider } = useContext(OpenModalContext);
 
-    const [isMobile, setIsMobile] = useState(false);
+    // const [isMobile, setIsMobile] = useState(false);
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        if (window.innerWidth < 575.98) {
+    //     if (window.innerWidth < 575.98) {
 
-            setIsMobile(true);
+    //         setIsMobile(true);
 
-        } else {
+    //     } else {
 
-            setIsMobile(false);
+    //         setIsMobile(false);
 
-        }
+    //     }
 
-    }, []);
+    // }, []);
 
     /*
     if the pImgArray have [1 img] make the img [width and height]  equal 50% 
