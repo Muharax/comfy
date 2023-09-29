@@ -31,7 +31,6 @@
   background-color: #c7ab62;
 }
 
-
 body {
   margin: 0;
   font-family: 'DM Sans', sans-serif;
@@ -74,7 +73,6 @@ ul.ul-custom {
   padding: 0;
   margin: 0;
 }
-
 
 .underline-heading {
   font-size: 35px;
@@ -126,18 +124,18 @@ ul.ul-custom {
 }
 
 /* style the counter btn*/
-button.counter-btn{
+button.counter-btn {
   border: none;
   outline: none;
   padding: 0;
   line-height: 0;
-  font-size: 20px; 
+  font-size: 20px;
 }
 
-button.counter-btn svg{
+button.counter-btn svg {
   transition: all .2s;
 }
 
-button.counter-btn:not(:disabled):hover svg{
+button.counter-btn:not(:disabled):hover svg {
   color: #c7ab62;
 }

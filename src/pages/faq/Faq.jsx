@@ -1,9 +1,9 @@
 import './faq.css';
-import Container from '../../components/helpers/Container';
+import Container from '../../components/helpers/container/Container';
+import { HashLink } from 'react-router-hash-link';
 import HeaderCover from '../../components/shared/header cover/HeaderCover';
 import { faqData } from "../../config/data";
-import SingleFaqItem from '../../components/SingleFaqItem';
-import { HashLink } from 'react-router-hash-link';
+import SingleFaqItem from '../../components/faq/SingleFaqItem';
 
 /*======================================*/
 /*======================================*/

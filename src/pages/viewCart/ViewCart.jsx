@@ -1,6 +1,6 @@
 import './viewCart.css';
 import HeaderCover from '../../components/shared/header cover/HeaderCover';
-import TableViewCart from '../../components/TableViewCart';
+import TableViewCart from '../../components/viewCart/TableViewCart';
 
 /*======================================*/
 /*======================================*/

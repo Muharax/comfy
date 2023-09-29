@@ -17,24 +17,21 @@ import {
   CheckoutInformation,
   CheckoutShipping,
   OrderConfirmed,
+  SingleProductDetails,
+  NotFound,
   TopMenu,
   FooterSection,
-  BottomSearch,
   ScrollTop,
   OpenModalContext,
   AuthContext,
+  ConfirmModalContext,
   ModalRegister,
   RequirAuth,
   CartModal,
   ConfirmDeleteMsg,
   ScrollToTopWhenNavigatePage,
-  CartContext,
   AlertMsg
 } from "./allPagesPaths";
-import NotFound from "./pages/notfound/NotFound";
-import { ConfirmModalContext } from "./context/ConfirmModalContext";
-import SingleProductDetails from "./pages/singleProductDetails/SingleProductDetails";
-import FullScreenProductSlider from "./components/full screen product slider/FullScreenProductSlider";
 
 /*======================================*/
 /*======================================*/
@@ -44,12 +41,10 @@ function App() {
 
   const { pathname } = useLocation();
 
-  const { key } = useLocation();
-
   // here we make array of the paths, that will remove the [header and footer] from it pages
   const hideHeaderAndFooterForPaths = ['/checkout/information', '/checkout/shipping', '/order-confirmed'];
 
-  const { showCartModal,openProductSlider,setOpenProductSlider,handleOpenSlider } = useContext(OpenModalContext);
+  const { showCartModal } = useContext(OpenModalContext);
 
   const { isRegisterSubmit, existUser, isLoginSubmit, x } = useContext(AuthContext);
 
@@ -68,13 +63,16 @@ function App() {
 
         <Route path="/shop" element={<Shop />} />
 
+        {/* route for category */}
+        <Route path="/shop/:category" element={<Shop />} />
+
         <Route path="/about" element={<About />} />
 
         <Route path="/contact" element={<Contact />} />
 
         <Route path="/faq" element={<Faq />} />
 
-        {/* nested route to make the tabs */}
+        {/* nested route to make the tabs and to protect the route */}
         <Route path="/account/*" element={<RequirAuth><Account /></RequirAuth>} >
           <Route path="myOrder" element={<OrderAcoordion />} />
           <Route path="accountInfo" element={<FormAccount />} />
@@ -98,7 +96,7 @@ function App() {
 
       </Routes>
 
-      {/* if not existuse show register modal */}
+      {/* if not exist user show register modal */}
       {!existUser && <ModalRegister />}
 
       {/* show the right list product modal in case showCartModal is true */}
@@ -110,8 +108,6 @@ function App() {
       just in case the [show] propety that inside the [showConfirmDelete] is true 
       */}
       {showConfirmDelete.show && <ConfirmDeleteMsg />}
-
-      {/* <BottomSearch /> */}
 
       {/* show an alert success msg when registration is done */}
       {isRegisterSubmit && <AlertMsg contentMsg="Register submitted successfully!" />}
@@ -136,20 +132,8 @@ function App() {
       {/* scroll to top when NAVIGATEEEEEEE between the pages */}
       <ScrollToTopWhenNavigatePage />
 
- 
-
-    
-
-
-
-
-
       {/* show the [FooterSection] just in case if the hideHeaderAndFooterForPaths NOT include the pathname */}
       {!hideHeaderAndFooterForPaths.includes(pathname) && <FooterSection />}
-
-
-
-
 
     </div>
   );

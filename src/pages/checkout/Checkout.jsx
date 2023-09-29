@@ -42,12 +42,7 @@ function Checkout() {
                                     <h6>{ele.pName}</h6>
                                     <span style={{ backgroundColor: ele.pcolor }}></span>
                                 </div>
-
-
-
-
-
-                               {/* 
+                                {/* 
                                if the product have SALE calculate the sale of main price and put it beside the main price
                                otherwise put the main price ONLY
                                */}
@@ -61,9 +56,6 @@ function Checkout() {
                                         :
                                         <span>${ele.pPrice}</span>}
                                 </div>
-
-
-
                             </div>
                         ))}
                     </div>

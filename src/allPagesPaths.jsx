@@ -1,20 +1,21 @@
 // export componets
-export { default as TopMenu } from "../src/shared/topMenu/TopMenu";
-export { default as ScrollTop } from "../src/components/scroll top/ScrollTop";
-export { default as BottomSearch } from "../src/components/bottomSearh/BottomSearch";
-export { default as FooterSection } from "../src/components/footer/FooterSection";
-export { default as ModalRegister } from "../src/components/modalRegister/ModalRegister";
-export { default as CartModal } from "../src/components/cartModal/CartModal";
-export { default as OrderAcoordion } from "../src/components/OrderAcoordion";
-export { default as FormAccount } from "../src/components/FormAccount";
-export { default as FormUpdatePass } from "../src/components/FormUpdatePass";
-export { default as AlertMsg } from "../src/components/alertMsg/AlertMsg";
+export { default as TopMenu } from "../src/components/shared/topMenu/TopMenu";
+export { default as ScrollTop } from "../src/components/shared/scroll top/ScrollTop";
+export { default as FooterSection } from "../src/components/shared/footer/footerSection/FooterSection";
+export { default as ModalRegister } from "../src/components/shared/modalRegister/modalRegister/ModalRegister";
+export { default as CartModal } from "../src/components/shared/cartModal/cartModal/CartModal";
+export { default as OrderAcoordion } from "../src/components/account/OrderAcoordion";
+export { default as FormAccount } from "../src/components/account/FormAccount";
+export { default as FormUpdatePass } from "../src/components/account/FormUpdatePass";
+export { default as AlertMsg } from "../src/components/shared/alertMsg/AlertMsg";
 export { default as RequirAuth } from "../src/components/RequirAuth";
-export { default as ConfirmDeleteMsg } from "../src/components/confirmDeleteMsg/ConfirmDeleteMsg";
-export { default as ScrollToTopWhenNavigatePage } from "../src/components/ScrollToTopWhenNavigatePage";
+export { default as ConfirmDeleteMsg } from "../src/components/shared/confirmDeleteMsg/ConfirmDeleteMsg";
+export { default as SingleProductDetails } from "./pages/singleProductDetails/SingleProductDetails";
+export { default as ScrollToTopWhenNavigatePage } from "../src/components/shared/ScrollToTopWhenNavigatePage";
 export { AuthContext } from "../src/context/AuthContext";
 export { OpenModalContext } from "../src/context/OpenModalContext";
 export { CartContext } from "../src/context/CartContext";
+export { ConfirmModalContext } from "../src/context/ConfirmModalContext";
 
 /*=======================================================*/
 
@@ -27,7 +28,8 @@ export { default as About } from "../src/pages/about/About";
 export { default as Contact } from "../src/pages/contact/Contact";
 export { default as Account } from "../src/pages/account/Account";
 export { default as ViewCart } from "./pages/viewCart/ViewCart";
+export { default as NotFound } from "./pages/notfound/NotFound";
 export { default as Checkout } from "./pages/checkout/Checkout";
-export { default as CheckoutInformation } from "./components/CheckoutInformation";
-export { default as CheckoutShipping } from "./components/CheckoutShipping";
+export { default as CheckoutInformation } from "./components/checkout/CheckoutInformation";
+export { default as CheckoutShipping } from "./components/checkout/CheckoutShipping";
 export { default as OrderConfirmed } from "./pages/orderConfirmed/OrderConfirmed";  

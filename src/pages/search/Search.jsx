@@ -1,10 +1,10 @@
 import './search.css';
-import Container from '../../components/helpers/Container';
+import Container from '../../components/helpers/container/Container';
 import { useState } from 'react';
 import HeaderCover from '../../components/shared/header cover/HeaderCover';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import SingleProductUi from '../../components/topTrending/SingleProductUi';
+import SingleProductUi from '../../components/shared/SingleProductUi';
 import { AllProductsItems } from "../../config/data";
 
 /*======================================*/
@@ -14,8 +14,11 @@ import { AllProductsItems } from "../../config/data";
 const Search = () => {
 
     const [validated, setValidated] = useState(false);
+
     const [searchVal, setSearchVal] = useState("");
+
     const [products, setProducts] = useState([]);
+
     const [noResult, setNoResult] = useState(false);
 
     const handleSearchClick = (e) => {
@@ -29,14 +32,20 @@ const Search = () => {
 
             //if the input not 
             filterBySearch = AllProductsItems.filter((item) => {
+
                 if (item.pName.toLowerCase().includes(searchVal.toLowerCase())) { return item; }
+
             })
 
             // if no length ,mean not matching , therfore show the no found reslut msg
             if (!filterBySearch.length) {
-                setNoResult(true)
+
+                setNoResult(true);
+
             } else {
-                setNoResult(false)
+
+                setNoResult(false);
+
             }
 
         }

@@ -13,8 +13,6 @@ function OrderConfirmed() {
     // get the first name by split getUserName in loclastorage
     let firstName = getUserName.split(" ")[0];
 
-
-
     return (
         <div className='order-confirmed-box'>
             <div className="top">

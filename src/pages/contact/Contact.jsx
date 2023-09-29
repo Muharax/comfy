@@ -1,7 +1,7 @@
-import './contact.css'; 
+import './contact.css';
 import HeaderCover from '../../components/shared/header cover/HeaderCover';
 import { FaLocationDot, FaHeadphones, FaRegEnvelope, FaRegClock } from "react-icons/fa6";
-import FormContact from '../../components/FormContact';
+import FormContact from '../../components/contact/FormContact';
 
 /*======================================*/
 /*======================================*/
@@ -15,11 +15,7 @@ const Contact = () => {
         <div className="touch-info">
           <div className="left">
             <h3 className='underline-heading'>Get In Touch</h3>
-
-           
-
-            <FormContact/>
-
+            <FormContact />
           </div>
           {/* end left */}
           <div className="right">

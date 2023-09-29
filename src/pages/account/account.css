@@ -14,7 +14,7 @@
     padding-bottom: 20px;
 }
 
-.account-main .account-main-box .account-user-info button{
+.account-main .account-main-box .account-user-info button {
     border: none;
     background-color: transparent;
 }
@@ -50,31 +50,6 @@
     /* remove fade class from tabs */
 }
 
-/* .account-main .account-main-box .account-tabs ul.nav-tabs li {
-    width: calc(100% / 3);
-} */
-
-/* .account-main .account-main-box .account-tabs ul.nav-tabs .nav-link {
-    display: block;
-    color: #999;
-    border: none;
-    text-align: left;
-    padding: 8px 0;
-    font-weight: 600;
-    transition: color .2s;
-}
-
-.account-main .account-main-box .account-tabs ul.nav-tabs .nav-link:hover{
-    color: #222;
-}
-
-.account-main .account-main-box .account-tabs ul.nav-tabs .nav-link.active {
-    background-color: transparent;
-    color: #222;
-    border-bottom: 2px solid #222;
-} */
-
-
 .account-main .account-main-box .account-tabs ul.account-link-lists {
     border-bottom: 1px solid lightgray;
     padding: 0 0 20px 0;
@@ -101,9 +76,7 @@
 }
 
 .account-main .account-main-box .account-tabs ul.account-link-lists li a.active {
-
     color: #222;
-
 }
 
 .account-main .account-main-box .account-tabs ul.account-link-lists li a.active::before {
@@ -114,15 +87,6 @@
     background-color: #222;
     bottom: -20px;
 }
-
-
-
-
-
-
-
-
-
 
 .account-main .account-main-box .account-tabs .tab-single {
     margin-bottom: 70px;
@@ -168,7 +132,7 @@
     padding: 11px 17px;
     border-radius: 50px;
     cursor: pointer;
-    transition: all .2s; 
+    transition: all .2s;
     user-select: none;
 }
 
@@ -274,96 +238,95 @@
 /*===========Responsive===============*/
 /*====================================*/
 
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 480px) {
+
     .account-main .account-main-box {
-        width: 90%; 
+        width: 90%;
         margin: auto;
     }
-    
+
     .account-main .account-main-box .account-user-info div h2 {
-        font-size: 7vw; 
-    }
-    
-    .account-main .account-main-box .account-user-info div p {
-        font-size: 16px;
-       margin-bottom: 0;
-    }
-    
-    .account-main .account-main-box .account-tabs {
-        margin-top: 20px; 
+        font-size: 7vw;
     }
 
-    .account-main .account-main-box .account-tabs > div:first-child{
+    .account-main .account-main-box .account-user-info div p {
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+
+    .account-main .account-main-box .account-tabs {
+        margin-top: 20px;
+    }
+
+    .account-main .account-main-box .account-tabs>div:first-child {
         overflow-x: auto;
     }
 
-    .account-main .account-main-box .account-tabs > div:first-child::-webkit-scrollbar { 
+    .account-main .account-main-box .account-tabs>div:first-child::-webkit-scrollbar {
         height: 1px;
     }
 
-    .account-main .account-main-box .account-tabs > div:first-child::-webkit-scrollbar-thumb { 
+    .account-main .account-main-box .account-tabs>div:first-child::-webkit-scrollbar-thumb {
         background-color: transparent;
     }
 
-    
-    .account-main .account-main-box .account-tabs ul.account-link-lists { 
+    .account-main .account-main-box .account-tabs ul.account-link-lists {
         width: 450px;
         padding: 0;
     }
-    
-   
 
-    .account-main .account-main-box .account-tabs ul.account-link-lists li a{
+    .account-main .account-main-box .account-tabs ul.account-link-lists li a {
         font-size: 17px;
     }
 
-    .account-main .account-main-box .account-tabs ul.account-link-lists li a.active::before{
+    .account-main .account-main-box .account-tabs ul.account-link-lists li a.active::before {
         bottom: 0;
     }
-    
+
     .account-main .account-main-box .account-tabs .tab-single h2.tab-title {
-        margin: 20px 0; 
+        margin: 20px 0;
         font-size: 20px;
     }
 
-    .account-main .account-main-box .account-tabs form label { 
+    .account-main .account-main-box .account-tabs form label {
         font-size: 15px;
     }
-    
-    .account-main .account-main-box .account-tabs .tab-single { 
+
+    .account-main .account-main-box .account-tabs .tab-single {
         width: 100%;
     }
-    
+
     .account-main .account-main-box .account-tabs .tab-single .panel-group {
-        margin-bottom: 60px; 
+        margin-bottom: 60px;
     }
-    
+
     .account-main .account-main-box .account-tabs .tab-single .panel-group .panel-heading .left span.user-id-products {
-        font-size: 4vw; 
+        font-size: 4vw;
     }
-    
+
     .account-main .account-main-box .account-tabs .tab-single .panel-group .panel-heading .left p {
         font-size: 3.3vw;
         margin: 5px 0;
     }
-    
-    .account-main .account-main-box .account-tabs .tab-single .panel-group .panel-heading h4.right span { 
-        font-size: 3.5vw; 
-        padding: 5px 8px; 
+
+    .account-main .account-main-box .account-tabs .tab-single .panel-group .panel-heading h4.right span {
+        font-size: 3.5vw;
+        padding: 5px 8px;
     }
-    
-    .account-main .account-main-box .account-tabs .tab-single .panel-group .panel-heading { 
+
+    .account-main .account-main-box .account-tabs .tab-single .panel-group .panel-heading {
         padding: 15px 10px;
         flex-direction: column;
         align-items: flex-start !important;
         gap: 20px;
     }
-    
+
     .account-main .account-main-box .account-tabs .tab-single .panel-group ul li .user-product-single {
         padding: 15px;
     }
 
-    .account-main .account-main-box .account-tabs .tab-single .panel-group ul li .user-product-single .left img + div h5{
+    .account-main .account-main-box .account-tabs .tab-single .panel-group ul li .user-product-single .left img+div h5 {
         font-size: 4vw;
     }
+
 }

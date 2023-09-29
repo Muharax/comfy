@@ -20,19 +20,15 @@ export const ConfirmModalProvider = ({ children }) => {
     //  this to show the spinner inside the [confirm order btn]
     const [isConfirmSpinnerShow, setIsConfirmSpinnerShow] = useState(false);
 
-
-
-
     // this is in order to make operation inside button like [spinner] in single product details page
     const [isBtnProductDetailsClicked, setIsBtnProductDetailsClicked] = useState(false);
+
     const [isProductDetailsSpinnerShow, setsProductDetailsSpinnerShow] = useState(false);
+
     const [newDiv, setNewDiv] = useState(false);
-// this when we click on [minus btn] that in single product details page
 
-const [isMinusClicked, setIsMinusClicked] = useState(false);
-
-
-
+    // this when we click on [minus btn] that in single product details page 
+    const [isMinusClicked, setIsMinusClicked] = useState(false);
 
     const [showConfirmDelete, setShowConfirmDelete] = useState({
         show: false,
@@ -40,21 +36,24 @@ const [isMinusClicked, setIsMinusClicked] = useState(false);
         all: false,
         confirmText: "",
         justCloseConfirm: false,
-        deleteThisProduct:false
+        deleteThisProduct: false
     });
 
+    /*=======================================*/
+    /*=======================================*/
+
     const handleCloseConfirmDelete = () => {
+
         setShowConfirmDelete({
             show: false,
             id: null,
             all: false,
             confirmText: "",
             justCloseConfirm: false,
-            deleteThisProduct:false
+            deleteThisProduct: false
         })
 
         setIsConfirmBtnOrderClicked(false);
-   //  setIsMinusClicked(false);
 
     };
 
@@ -76,7 +75,7 @@ const [isMinusClicked, setIsMinusClicked] = useState(false);
             all: false,//this will use it when we need to REMOVE ALL PRODUCTS ,when click on [empty all cart] btn
             confirmText: txt,
             justCloseConfirm: false,
-            deleteThisProduct:false
+            deleteThisProduct: false
         });
 
     };
@@ -90,7 +89,7 @@ const [isMinusClicked, setIsMinusClicked] = useState(false);
             all: true,
             confirmText: "Are you sure you want to remove all items from your cart?",
             justCloseConfirm: false,
-            deleteThisProduct:false
+            deleteThisProduct: false
         });
 
     }
@@ -103,11 +102,10 @@ const [isMinusClicked, setIsMinusClicked] = useState(false);
             all: false,
             confirmText: "Are you sure you want to purchase?",
             justCloseConfirm: true,
-            deleteThisProduct:false
+            deleteThisProduct: false
         });
 
     };
-
 
     // this in order to close the confirm ,when we need to remove a product from [single product details page] 
     const handleJustCloseWhenRemoveFromSingleDetails = (id) => {
@@ -118,15 +116,10 @@ const [isMinusClicked, setIsMinusClicked] = useState(false);
             all: false,
             confirmText: "Are you sure you want to delete from cart?",
             justCloseConfirm: false,
-            deleteThisProduct:true
+            deleteThisProduct: true
         });
 
     };
-
-
-
-
-
 
     const handleDeleteTrue = () => {
 
@@ -148,7 +141,7 @@ const [isMinusClicked, setIsMinusClicked] = useState(false);
                 all: false,
                 confirmText: "",
                 justCloseConfirm: false,
-                deleteThisProduct:false
+                deleteThisProduct: false
             });
 
         }
@@ -163,7 +156,7 @@ const [isMinusClicked, setIsMinusClicked] = useState(false);
                 all: false,
                 confirmText: "",
                 justCloseConfirm: false,
-                deleteThisProduct:false
+                deleteThisProduct: false
             });
 
             window.scrollTo({
@@ -174,38 +167,36 @@ const [isMinusClicked, setIsMinusClicked] = useState(false);
         }
 
         if (showConfirmDelete.show && showConfirmDelete.justCloseConfirm) {
-            
+
             setShowConfirmDelete({
                 show: false,
                 id: null,
                 all: false,
                 confirmText: "",
                 justCloseConfirm: false,
-                deleteThisProduct:false
+                deleteThisProduct: false
             });
 
             setIsConfirmBtnOrderClicked(true);
 
         }
 
+        if (showConfirmDelete.show && showConfirmDelete.deleteThisProduct && showConfirmDelete.id) {
 
-
-        if (showConfirmDelete.show && showConfirmDelete.deleteThisProduct&& showConfirmDelete.id) {
             let filteredData = cart.filter((ele) => ele.pId !== showConfirmDelete.id);
 
             // update arr
             setCart(filteredData);
+
             setShowConfirmDelete({
                 show: false,
                 id: null,
                 all: false,
                 confirmText: "",
                 justCloseConfirm: false,
-                deleteThisProduct:false
+                deleteThisProduct: false
             });
 
-          //setIsMinusClicked(true);
-      
         }
 
     };
@@ -223,14 +214,11 @@ const [isMinusClicked, setIsMinusClicked] = useState(false);
             handleClickDelteAll,
             handleJustClose,
             showConfirmDelete,
-
-
-
-            isBtnProductDetailsClicked, 
+            isBtnProductDetailsClicked,
             setIsBtnProductDetailsClicked,
-            isProductDetailsSpinnerShow, 
+            isProductDetailsSpinnerShow,
             setsProductDetailsSpinnerShow,
-            newDiv, 
+            newDiv,
             setNewDiv,
             handleJustCloseWhenRemoveFromSingleDetails,
             isMinusClicked, setIsMinusClicked

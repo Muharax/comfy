@@ -32,11 +32,9 @@ import product2A from "../../src/assets/images/top trending/single details produ
 import product2B from "../../src/assets/images/top trending/single details product/product2B.jpg";
 import product3A from "../../src/assets/images/top trending/single details product/product3A.jpg";
 import product3B from "../../src/assets/images/top trending/single details product/product3B.jpg";
-
 import product4A from "../../src/assets/images/top trending/single details product/product4A.jpg";
 import product4B from "../../src/assets/images/top trending/single details product/product4B.jpg";
 import product4C from "../../src/assets/images/top trending/single details product/product4C.jpg";
-
 import product5A from "../../src/assets/images/top trending/single details product/product5A.jpg";
 import product5B from "../../src/assets/images/top trending/single details product/product5B.jpg";
 import product6A from "../../src/assets/images/top trending/single details product/product6A.jpg";
@@ -64,6 +62,7 @@ import leo from "../../src/assets/images/brandSlider/leo.png";
 import ra from "../../src/assets/images/brandSlider/ra.png";
 import tidy from "../../src/assets/images/brandSlider/tidy.png";
 
+/*=========================================*/
 
 // insta posts slider imags
 import img1 from "../../src/assets/images/instaposts/1.jpg";

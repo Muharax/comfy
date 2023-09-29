@@ -7,7 +7,6 @@
     display: block;
     width: 120px;
     height: 60px;
-
 }
 
 .checkout-box .logoChekout img {
@@ -35,7 +34,7 @@
     padding: 40px 40px 20px 40px
 }
 
-.checkout-box .checkout-content .right .top{
+.checkout-box .checkout-content .right .top {
     height: 450px;
     overflow-y: auto;
     padding: 5px 20px 5px 0;
@@ -167,9 +166,8 @@ input[type=number] {
     text-decoration: line-through;
     color: #888;
     font-weight: 400;
-   margin-left: 15px;
+    margin-left: 15px;
 }
-
 
 .checkout-box .checkout-content .right .middle {
     border-bottom: 1px solid lightgray;
@@ -237,7 +235,7 @@ input[type=number] {
     }
 
     .checkout-box .checkout-content .right .top {
-        height: 220px; 
+        height: 220px;
     }
 
 }

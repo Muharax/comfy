@@ -56,11 +56,32 @@ const Account = () => {
         </div>
         <div className="account-tabs">
           <div>
-          <ul className="account-link-lists list-unstyled m-0 d-flex">
-            <li><Link to="/account/myOrder" className={getLinkPath === "myOrder" ? "active" : ""}>My Order</Link></li>
-            <li><Link to="/account/accountInfo" className={getLinkPath === "accountInfo" ? "active" : ""}>Account info</Link></li>
-            <li><Link to="/account/changePassword" className={getLinkPath === "changePassword" ? "active" : ""}>Change password</Link></li>
-          </ul>
+            <ul className="account-link-lists list-unstyled m-0 d-flex">
+              <li>
+                <Link
+                  to="/account/myOrder"
+                  className={getLinkPath === "myOrder" ? "active" : ""}
+                >
+                  My Order
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/account/accountInfo"
+                  className={getLinkPath === "accountInfo" ? "active" : ""}
+                >
+                  Account info
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/account/changePassword"
+                  className={getLinkPath === "changePassword" ? "active" : ""}
+                >
+                  Change password
+                </Link>
+              </li>
+            </ul>
           </div>
           <Outlet />
         </div>

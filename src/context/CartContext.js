@@ -11,8 +11,7 @@ import { AuthContext } from "./AuthContext";
 this context is for the table cart to do the following :
 - draw the [cart] in table 
 - increase and decrease the product number
-- make the (+ -) button diseabled or not based on [in stock] of every product
-- check if the [Empty Shopping Cart] btn in table , clicked or not
+- make the (+ -) button diseabled or not based on [in stock] of every product 
 */
 export const CartContext = createContext();
 
@@ -102,7 +101,7 @@ export const CartContextProvider = ({ children }) => {
 
             });
 
-        });  
+        });
 
     };
 
@@ -127,7 +126,7 @@ export const CartContextProvider = ({ children }) => {
 
             });
 
-        }); 
+        });
 
     }
 

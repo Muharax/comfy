@@ -1,21 +1,20 @@
 import './singleProductDetails.css';
-import Container from "../../../src/components/helpers/Container";
+import Container from "../../../src/components/helpers/container/Container";
 import '../../../src/components/helpers/slickSliderStyle.css';
 import { useState, useContext, useEffect, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 import { LiaAngleRightSolid, LiaAngleLeftSolid } from "react-icons/lia";
 import { AllProductsItems } from "../../config/data";
-import InstaPosts from '../../components/instaPosts/InstaPosts';
-import BrandSlider from '../../components/brandSlider/BrandSlider';
+import InstaPosts from '../../components/shared/instaPosts/instaPosts/InstaPosts';
+import BrandSlider from '../../../src/components/shared/brandSlider/brandSlider/BrandSlider';
+import FullScreenProductSlider from '../../components/singleProductDetails/FullScreenProductSlider';
+import { OpenModalContext } from "../../context/OpenModalContext";
+import ZoomProductImg from '../../components/singleProductDetails/ZoomProductImg';
+import ProductDetailsRight from '../../components/singleProductDetails/ProductDetailsRight';
+import RelatedProductSlider from '../../components/singleProductDetails/RelatedProductSlider';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import FullScreenProductSlider from '../../components/full screen product slider/FullScreenProductSlider';
-import { OpenModalContext } from '../../allPagesPaths';
-import ZoomProductImg from '../../components/ZoomProductImg';
-import ProductDetailsRight from '../../components/ProductDetailsRight';
-import RelatedProductSlider from '../../components/RelatedProductSlider';
-
 /*======================================*/
 /*======================================*/
 /*======================================*/
@@ -47,7 +46,7 @@ const SingleProductDetails = () => {
     const [isCheck, setIsCheck] = useState(false);
 
     // get the active classname ,initialy the first element get the active classname
-    const [active, setActive] = useState(0); 
+    const [active, setActive] = useState(0);
 
     // check is screen for mobile or not
     const [isMobile, setIsMobile] = useState(false);
@@ -82,8 +81,6 @@ const SingleProductDetails = () => {
 
     /*==================================================*/
 
-    
-
     useEffect(() => {
 
         if (window.innerWidth < 575.98) {
@@ -97,6 +94,7 @@ const SingleProductDetails = () => {
         }
 
     }, []);
+
     /*==================================================*/
 
     const settings = {

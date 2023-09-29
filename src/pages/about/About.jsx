@@ -1,10 +1,10 @@
 import './about.css';
-import Container from '../../components/helpers/Container';
+import Container from '../../components/helpers/container/Container';
 import HeaderCover from '../../components/shared/header cover/HeaderCover';
+import AboutBg from "../../assets/images/about-bg.jpg";
+import AboutTestimonials from '../../components/about/AboutTestimonials';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
-import AboutBg from "../../assets/images/about-bg.jpg";
-import AboutTestimonials from '../../components/AboutTestimonials';
 
 /*======================================*/
 /*======================================*/
