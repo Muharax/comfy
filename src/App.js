@@ -1,6 +1,8 @@
 // use HashRouter NOT BrouwserRouter,coz the project upload on github
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useContext } from "react";
+import Hide from './pages/hide/Hide';
+
 import {
   HomePage,
   Shop,
@@ -33,6 +35,7 @@ import {
   AlertMsg
 } from "./allPagesPaths";
 
+
 /*======================================*/
 /*======================================*/
 /*======================================*/
@@ -59,7 +62,11 @@ function App() {
 
       <Routes>
 
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={
+          <Hide>
+            <HomePage />
+          </Hide>
+        } />
 
         <Route path="/shop" element={<Shop />} />
 
